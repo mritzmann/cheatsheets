@@ -18,4 +18,28 @@
 
 Bracket expression lists also accept classes instead of just single characters and ranges. Traditional character classes are:
 
-`[:alnum:]` `[:alpha:]` `[:ascii:]` `[:blank:]` `[:cntrl:]` `[:digit:]` `[:graph:]` `[:lower:]` `[:print:]` `[:punct:]` `[:space:]` `[:upper:]` `[:xdigit:]`
+`[:alnum:]` Represents an alphanumeric character.
+
+`[:alpha:]` Represents an alphabetic character.
+
+`[:ascii:]` Represents a character that fits into the ASCII character set.
+
+`[:blank:]` Represents a blank character, that is, a space or a tab.
+
+`[:cntrl:]` Represents a control character.
+
+`[:digit:]` Represents a digit (0 through 9).
+
+`[:graph:]` Represents any printable character except space.
+
+`[:lower:]` Represents a lowercase character.
+
+`[:print:]` Represents any printable character including space.
+
+`[:punct:]` Represents any printable character which is not a space or an alphanumeric character.
+
+`[:space:]` Represents white-space characters: space, form-feed (`\f`), newline (`\n`), carriage return (`\r`), horizontal tab (`\t`), and vertical tab (`\v`).
+
+`[:upper:]` Represents an uppercase letter.
+
+`[:xdigit:]` Represents hexadecimal digits (0 through F).
