@@ -6,6 +6,8 @@
 
 `$` (dollar sign) Atom matches with the end of a line.
 
+`{1,30}` String must be 1 to 30 characters long. Example: `^[a-z]{1,3}$` (`abc` is valid, `abcd` not)
+
 ## Bracket Expressions
 
 `[0-9]` Matches digits from 0 to 9.
