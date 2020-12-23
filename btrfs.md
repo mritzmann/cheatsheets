@@ -26,6 +26,15 @@ Pull snapshot from another host:
 ssh root@srv01.example.com "btrfs send /path/to/snapshot" | btrfs receive /path/to/snapshot
 ```
 
+## Disabling COW (NODATACOW)
+
+Disabling or enabling COW only works on 0 byte sized files.
+
+- Turn off COW on file or folder: `chattr +C file`
+- Turn on COW on file or folder: `chattr -C file`
+- See if COW is on or off for file: `lsattr filename`
+- See if COW is on or off for directory: `lsattr -d directory`
+
 ## Btrfs Processes 
 
 - `btrfs-cleaner`: A possible cause for a high disk I/O load are deleted or created snapshots and the recalculation of btrfs quota. You can disable btrfs quota with `btrfs quota disable <path>`. Source: [spinics.net](https://www.spinics.net/lists/linux-btrfs/msg74737.html)
