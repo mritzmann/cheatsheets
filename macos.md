@@ -1,6 +1,6 @@
 # macOS
 
-## Disable non-breaking spaces
+## Disable non-breaking space
 
 Problem:
 
@@ -22,5 +22,7 @@ $ cat ~/Library/KeyBindings/DefaultKeyBinding.dict
 "~ " = ("insertText:", " ");
 }
 ```
+
+Afterwards, a restart of the affected application is necessary.
 
 Source: https://superuser.com/a/142573
