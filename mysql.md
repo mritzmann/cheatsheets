@@ -13,14 +13,14 @@ USE db_name;
 ## Table
 
 ```mysql
-# lit all
+# list all
 SHOW TABLES;
 ```
 
 ## Columns
 
 ```mysql
-# show alle columns
+# list all
 SHOW COLUMNS FROM table_name;
 ```
 
