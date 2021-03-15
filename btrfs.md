@@ -17,13 +17,13 @@ cargo install btsdu
 Push snapshot to another host:
 
 ```shell
-btrfs send /path/to/snapshot | ssh root@srv01.example.com "btrfs receive /path/to/snapshot"
+btrfs send /path/to/snapshot | pv | ssh root@srv01.example.com "btrfs receive /path/to/snapshot"
 ```
 
 Pull snapshot from another host:
 
 ```shell
-ssh root@srv01.example.com "btrfs send /path/to/snapshot" | btrfs receive /path/to/snapshot
+ssh root@srv01.example.com "btrfs send /path/to/snapshot" | pv | btrfs receive /path/to/snapshot
 ```
 
 ## Disabling COW (NODATACOW)
