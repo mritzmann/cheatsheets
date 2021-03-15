@@ -1,3 +1,3 @@
 # Cheat Sheets
 
-Some cheat sheets.
+Because useful information should generally be publicly available.
