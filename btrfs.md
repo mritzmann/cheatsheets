@@ -35,6 +35,16 @@ Disabling or enabling COW only works on 0 byte sized files.
 - See if COW is on or off for file: `lsattr filename`
 - See if COW is on or off for directory: `lsattr -d directory`
 
+## Set Subvolume to Read-only
+
+```shell
+# set to read-only
+btrfs property set -ts /path/to/subvolume ro true
+
+# disable read-only
+btrfs property set -ts /path/to/subvolume ro false
+```
+
 ## Btrfs Processes 
 
 - `btrfs-cleaner`: A possible cause for a high disk I/O load are deleted or created snapshots and the recalculation of btrfs quota. You can disable btrfs quota with `btrfs quota disable <path>`. Source: [spinics.net](https://www.spinics.net/lists/linux-btrfs/msg74737.html)
