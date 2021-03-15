@@ -45,6 +45,16 @@ btrfs property set -ts /path/to/subvolume ro true
 btrfs property set -ts /path/to/subvolume ro false
 ```
 
+## Restore to Snapshot
+
+```shell
+# get subvolume id
+btrfs sub list /
+
+# set subvolume id as default
+btrfs subvolume set-default <ID> /
+```
+
 ## Btrfs Processes 
 
 - `btrfs-cleaner`: A possible cause for a high disk I/O load are deleted or created snapshots and the recalculation of btrfs quota. You can disable btrfs quota with `btrfs quota disable <path>`. Source: [spinics.net](https://www.spinics.net/lists/linux-btrfs/msg74737.html)
