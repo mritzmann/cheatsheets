@@ -36,7 +36,7 @@ SELECT * FROM table_name
 SELECT user1 FROM imapsync WHERE returned_text LIKE '%no wanted headers%';
 ```
 
-## Compare to Tables
+## Compare Tables from different Databases
 
 ```sql
 # compare 'id' from table 'table' from db 'db1' with
