@@ -35,3 +35,15 @@ SELECT * FROM table_name
 # - and returns values in colum user1
 SELECT user1 FROM imapsync WHERE returned_text LIKE '%no wanted headers%';
 ```
+
+## Compare to Tables
+
+```sql
+# compare 'id' from table 'table' from db 'db1' with
+# 'id' from table 'table' from db 'db2'
+SELECT id
+FROM db1.table
+WHERE id NOT IN
+    (SELECT id
+     FROM db2.table);
+```
