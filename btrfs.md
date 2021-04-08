@@ -55,6 +55,19 @@ btrfs sub list /
 btrfs subvolume set-default <ID> /
 ```
 
+## Show Compression Ratio
+
+> compsize takes a list of files (given as arguments) on a btrfs filesystem and measures used compression types and effective compression ratio, producing a report
+
+https://github.com/kilobyte/compsize
+
+```shell
+git clone https://github.com/kilobyte/compsize.git
+cd compsize
+make
+./compsize /path/to/file
+```
+
 ## Btrfs Processes 
 
 - `btrfs-cleaner`: A possible cause for a high disk I/O load are deleted or created snapshots and the recalculation of btrfs quota. You can disable btrfs quota with `btrfs quota disable <path>`. Source: [spinics.net](https://www.spinics.net/lists/linux-btrfs/msg74737.html)
