@@ -27,3 +27,9 @@ openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes \
   -keyout example.key -out example.crt -subj "/CN=localhost" \
   -addext "subjectAltName=DNS:example.com,DNS:www.example.com,IP:127.0.0.1"
 ```
+
+## Show Public Key
+
+```shell
+openssl s_client -connect website01.tech-1361.test.opsserver.ch:443 < /dev/null 2>/dev/null | openssl x509 -text -in /dev/stdin
+```
