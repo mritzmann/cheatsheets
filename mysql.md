@@ -39,6 +39,7 @@ SELECT user1 FROM imapsync WHERE returned_text LIKE '%no wanted headers%';
 ## Update
 
 ```sql
+# set auto_archive to 1, where auto_archive is set to 0
 UPDATE segment SET auto_archive = '1' WHERE auto_archive = '0';
 ```
 
