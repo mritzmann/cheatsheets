@@ -36,6 +36,12 @@ SELECT * FROM table_name
 SELECT user1 FROM imapsync WHERE returned_text LIKE '%no wanted headers%';
 ```
 
+## Update
+
+```sql
+UPDATE segment SET auto_archive = '1' WHERE auto_archive = '0';
+```
+
 ## Compare Tables from different Databases
 
 ```sql
