@@ -12,6 +12,24 @@ location ~ ^\/.well-known\/pki-validation\/fileauth\.txt$ {
 }
 ```
 
+## ACME Challenge
+
+```nginx
+# Generation 5
+location ~ ^\/.well-known\/acme-challenge\/(.*)$ {
+        allow all;
+        satisfy any;
+        alias /usr/local/letsencrypt.sh/.acme-challenges/$1;
+}
+
+# Generation 6
+location ~ ^\/.well-known\/acme-challenge\/(.*)$ {
+        allow all;
+        satisfy any;
+        alias /usr/local/dehydrated/.acme-challenges/$1;
+}
+```
+
 ## Access-Control-Allow-Origin: Multiple Domains
 
 ```nginx
