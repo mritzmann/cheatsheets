@@ -63,3 +63,11 @@ location ~* "^/" {
         root /home/$username/www;
 }
 ```
+
+# Different Favicon per Hostname
+
+```nginx
+location = /favicon.ico {
+   try_files /dev/null /favicons/$http_host.ico;
+}
+```
