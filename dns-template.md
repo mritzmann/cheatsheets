@@ -4,7 +4,7 @@ DNS Template for empty Domains.
 
 ```shell
 # Prevents sender spoofing for domains which do not send emails anyway.
-example.com         IN  TXT  v=spf1 mx -all
+example.com         IN  TXT  v=spf1 -all
 _dmarc.example.com  IN  TXT  p=reject
 
 # Indicates that this domain cannot receive emails.
