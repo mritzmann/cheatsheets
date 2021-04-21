@@ -68,6 +68,6 @@ location ~* "^/" {
 
 ```nginx
 location = /favicon.ico {
-   try_files /dev/null /favicons/$http_host.ico;
+   try_files /favicons/$http_host.ico /favicons/default.ico;
 }
 ```
