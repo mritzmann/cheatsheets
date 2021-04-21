@@ -55,3 +55,11 @@ Access-Control-Allow-Origin: https://example01.com
 
 $ curl -H "Origin: https://bad.example.com" --verbose https://example.com/test/test.woff 2>&1 | grep -i Access
 ```
+
+# Overwrite whole virtual host
+
+```nginx
+location ~* "^/" {
+        root /home/$username/www;
+}
+```
