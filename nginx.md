@@ -1,6 +1,6 @@
 # Nginx
 
-Some Examples.
+Some NGINX Examples.
 
 ## DCV (Domain Control Validation)
 
