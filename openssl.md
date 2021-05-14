@@ -20,6 +20,19 @@ Find intermediate cert from site cert:
 openssl x509 -in <file>.crt.pem -text -noout | grep -i 'CA Issuers'
 ```
 
+## Read Cert
+
+```shell
+# read cert in PEM format
+openssl x509 -in cert.crt -text
+
+# read cert in DER format
+openssl x509 -in cert.crt -inform DER -text
+
+# read cert in pkcs12 format
+openssl pkcs12 -in cert.crt -info
+```
+
 ## Self Signed Certificate
 
 ```shell
