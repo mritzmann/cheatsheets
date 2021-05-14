@@ -38,3 +38,10 @@ openssl s_client -connect example.com:443 -servername example.com < /dev/null 2>
 # inkl. intermediate
 openssl s_client -showcerts -connect example.com:443 -servername example.com
 ```
+
+## Find Intermediate Certificate
+
+```shell
+$ openssl x509 -in example.com.crt.pem -text -noout | grep -i "CA Issuers"
+                CA Issuers - URI:http://trust.quovadisglobal.com/qvsslg2.crt
+```
