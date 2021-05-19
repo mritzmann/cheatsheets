@@ -39,6 +39,19 @@ fio --name=read_iops --directory=$TEST_DIR --size=10G \
 --verify=0 --bs=4K --iodepth=64 --rw=randread --group_reporting=1
 ```
 
+## MySQL
+
+Requirements:
+- MySQL Database with name `sbtest`
+
+```shell
+# prepare
+sysbench /usr/share/sysbench/oltp_read_write.lua --db-driver=mysql --mysql-user=root  --tables=1 --table-size=25000000 --report-interval=10 --threads=128 prepare
+
+# run
+sysbench /usr/share/sysbench/oltp_read_write.lua  --db-driver=mysql --mysql-user=root  --tables=1 --table-size=25000000 --report-interval=10 --threads=128 run
+```
+
 ## Source
 
 * [Benchmarking persistent disk performance](https://cloud.google.com/compute/docs/disks/benchmarking-pd-performance)
