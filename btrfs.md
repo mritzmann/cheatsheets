@@ -62,10 +62,15 @@ btrfs subvolume set-default <ID> /
 https://github.com/kilobyte/compsize
 
 ```shell
+# make
 git clone https://github.com/kilobyte/compsize.git
 cd compsize
 make
-./compsize /path/to/file
+
+# debian: or install
+apt-get -y install btrfs-compsize
+
+compsize /path/to/file
 ```
 
 ## Btrfs Processes 
