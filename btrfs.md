@@ -85,3 +85,9 @@ Are shown in `htop` witch shift-k.
 - `btrfs-endio-write`
 - `btrfs-endio-meta`
 - `btrfs-worker`
+
+## nspawn
+
+> `systemd-nspawn -x -D /` will create a snapshot of your `/`, chroot into it, and delete it on exit. Works for xfs and btrfs
+
+https://www.reddit.com/r/linux/comments/ncw7xc/btrfs_use_cases/gy88mnc/
