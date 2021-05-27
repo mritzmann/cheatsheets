@@ -2,6 +2,23 @@
 
 Some NGINX Examples.
 
+## Location Search order
+
+```
+# --------------------------------------------------------------------------------------------------------------------------------------------
+# Search-Order       Modifier       Description                                                        Match-Type        Stops-search-on-match
+# --------------------------------------------------------------------------------------------------------------------------------------------
+#     1st               =           The URI must match the specified pattern exactly                  Simple-string              Yes
+#     2nd               ^~          The URI must begin with the specified pattern                     Simple-string              Yes
+#     3rd             (None)        The URI must begin with the specified pattern                     Simple-string               No
+#     4th               ~           The URI must be a case-sensitive match to the specified Rx      Perl-Compatible-Rx      Yes (first match)                 
+#     4th               ~*          The URI must be a case-insensitive match to the specified Rx    Perl-Compatible-Rx      Yes (first match)
+#     N/A               @           Defines a named location block.                                   Simple-string              Yes
+# --------------------------------------------------------------------------------------------------------------------------------------------
+```
+
+source: https://stackoverflow.com/a/59846239
+
 ## DCV (Domain Control Validation)
 
 ```nginx
