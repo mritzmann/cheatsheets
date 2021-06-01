@@ -1,5 +1,13 @@
 # MySQL
 
+## Repair
+
+If DB is running but a table is corrupt:
+
+```shell
+mysqlcheck -A | grep -v OK
+```
+
 ## Database
 
 ```mysql
