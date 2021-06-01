@@ -12,6 +12,19 @@ cargo install btsdu
 ~/.cargo/bin/btsdu -p /snapshot/20201126-0357-day /snapshot/20201127-0357-day
 ```
 
+## Quota
+
+```shell
+# enable
+btrfs quota enable /
+
+# show
+btrfs qgroup show /
+
+# disable
+btrfs quota disable /
+```
+
 ## Send and Receive
 
 Push snapshot to another host:
