@@ -45,3 +45,7 @@ Bracket expression lists also accept classes instead of just single characters a
 `[:upper:]` Represents an uppercase letter.
 
 `[:xdigit:]` Represents hexadecimal digits (0 through F).
+
+## Useful tools
+
+* [regex.help](https://regex.help/) - generate a matching pattern
