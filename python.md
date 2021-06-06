@@ -11,3 +11,12 @@
 ## function
 
 * `str()`: returns the string version of the given object
+
+## Multi Line Strings
+
+```python
+leaves_of_grass = """
+I am a long text on
+multiple lines
+"""
+```
