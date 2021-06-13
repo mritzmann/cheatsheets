@@ -2,6 +2,7 @@
 
 ## data types
 
+* `str`: String, text
 * `int`: number without decimal point
 * `float`: decimal number, decial point are allowed
 * `bool`: True or False
