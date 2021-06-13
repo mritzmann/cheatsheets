@@ -20,3 +20,9 @@ I am a long text on
 multiple lines
 """
 ```
+
+## Input
+
+```python
+name = input('Enter your name')
+```
