@@ -1,17 +1,23 @@
 # Python
 
-## data types
+## Data Types
 
 * `str`: String, text
-* `int`: number without decimal point
-* `float`: decimal number, decial point are allowed
+* `int`: Number without decimal point
+* `float`: Decimal number, decial point are allowed
 * `bool`: True or False
 
 [and more](https://www.w3schools.com/python/python_datatypes.asp)
 
-## function
+## Function
 
-* `str()`: returns the string version of the given object
+* `print()`: Prints the given object
+* `str()`: Returns the string version of the given object
+* `type()`: Returns the type of the object
+```python
+door_open = True
+print(type(door_open))
+```
 
 ## Multi Line Strings
 
@@ -26,4 +32,29 @@ multiple lines
 
 ```python
 name = input('Enter your name')
+```
+
+## Relational Operators
+
+Relational operators compare two items and return either True or False.
+
+* `==`: Equals
+* `!=`: Not equals
+* `>`: Greater than
+* `>=`: Greater than or equal to
+* `<`: Less than
+* `<=`: Less than or equal to
+
+## Boolean Operators / Logical Operators
+
+* `and`: Returns True if both sides are returns True
+* `or`
+* `not`
+
+## If Statement
+
+```python
+user_name = "Markus"
+if user_name == "Markus":
+  print("Hi Markus!")
 ```
