@@ -48,7 +48,7 @@ Relational operators compare two items and return either True or False.
 ## Boolean Operators / Logical Operators
 
 * `and`: Returns True if both sides are returns True
-* `or`
+* `or`: Returns True if one or both side are returns True
 * `not`
 
 ## If Statement
