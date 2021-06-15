@@ -49,7 +49,7 @@ Relational operators compare two items and return either True or False.
 
 * `and`: Returns True if both sides are returns True
 * `or`: Returns True if one or both side are returns True
-* `not`
+* `not`: Returns True if the expression is False
 
 ## If Statement
 
