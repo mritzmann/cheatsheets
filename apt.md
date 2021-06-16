@@ -15,3 +15,9 @@ Install from backports:
 ```shell
 apt-get install <package>/buster-backports
 ```
+
+List all files from package:
+
+```shell
+dpkg-query -L <package>
+```
