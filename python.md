@@ -58,3 +58,12 @@ user_name = "Markus"
 if user_name == "Markus":
   print("Hi Markus!")
 ```
+
+## Else Statements
+
+```python
+if weekday:
+  print("wake up at 6:30")
+else:
+  print("sleep in")
+```
