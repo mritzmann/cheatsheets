@@ -67,3 +67,16 @@ if weekday:
 else:
   print("sleep in")
 ```
+
+## Elif Statements
+
+```python
+donation = 150
+ 
+if donation >= 200:
+  print("gold donor status")
+elif donation >= 100:
+  print("silver donor status")
+else:
+  print("bronze donor status")
+```
