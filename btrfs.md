@@ -4,10 +4,10 @@
 
 ```shell
 # create read-only snapshot
-btrfs subvolume snapshot -r /path/to/source /path/to/target
+btrfs sub snap -r /path/to/source /path/to/target
 
 # create snapshot
-btrfs subvolume snapshot /path/to/source /path/to/target
+btrfs sub snap /path/to/source /path/to/target
 ```
 
 ## Diff between Snapshots
