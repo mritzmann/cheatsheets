@@ -1,5 +1,15 @@
 # Btrfs
 
+## Create Snapshot
+
+```shell
+# create read-only snapshot
+btrfs subvolume snapshot -r /path/to/source /path/to/target
+
+# create snapshot
+btrfs subvolume snapshot /path/to/source /path/to/target
+```
+
 ## Diff between Snapshots
 
 > This tool can show you what folders have the most changed data between snapshots
