@@ -6,5 +6,5 @@ New session:
 screen -S <session-name>
 ```
 
-* Detach Session: Ctrl+A then press d
-* re-attach Session: screen -r
+* Detach Session: <kbd>Ctrl+A</kbd> then press <kbd>d</kbd>
+* Re-attach Session: screen -r
