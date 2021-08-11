@@ -2,19 +2,19 @@
 
 ## Convert
 
-From pfx to plain text:
+From pfx to plain:
 
 ```shell
 openssl pkcs12 -in <file>.pfx -nocerts -out <file>.key
 ```
 
-From pem to plain text:
+From pem to plain:
 
 ```shell
 openssl x509 -in <file>.crt.pem -out <file>.crt
 ```
 
-From DER to plain text:
+From DER to plain:
 
 ```shell
 openssl x509 -inform der -in <file>.crt -out <file>.crt
