@@ -11,7 +11,13 @@ openssl pkcs12 -in <file>.pfx -nocerts -out <file>.key
 From pem to plain text:
 
 ```shell
-openssl x509 -in <file>.crt.pem -out <file>.crt   
+openssl x509 -in <file>.crt.pem -out <file>.crt
+```
+
+From DER to plain text:
+
+```shell
+openssl x509 -inform der -in <file>.crt -out <file>.crt
 ```
 
 Find intermediate cert from site cert:
