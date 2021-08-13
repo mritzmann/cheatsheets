@@ -8,6 +8,18 @@ If DB is running but a table is corrupt:
 mysqlcheck -A | grep -v OK
 ```
 
+## DB Dump
+
+```shell
+mysqldump --single-transaction $DB_NAME > dump.sql
+```
+
+* `--single-transaction`: This option sends a `START TRANSACTION` SQL statement to the server
+           before dumping data. It is useful only with transactional tables
+           such as InnoDB, because then it dumps the consistent state of the
+           database at the time when BEGIN was issued without blocking any
+           applications.
+
 ## Database
 
 ```mysql
