@@ -8,6 +8,14 @@ If DB is running but a table is corrupt:
 mysqlcheck -A | grep -v OK
 ```
 
+If `mysqlcheck` does not work or DB does not start:
+
+```shell
+service mysql stop
+cd /var/lib/mysql/<DB-NAME>
+myisamchk -r <TABLE-NAME>
+```
+
 ## DB Dump
 
 ```shell
