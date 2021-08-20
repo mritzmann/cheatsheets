@@ -60,7 +60,11 @@ openssl s_client -showcerts -connect example.com:443 -servername example.com
 
 ## Find Intermediate Certificate
 
+See: [RFC3280 4.2.2.1](https://datatracker.ietf.org/doc/html/rfc3280#section-4.2.2.1) 
+
 ```shell
-$ openssl x509 -in example.com.crt.pem -text -noout | grep -i "CA Issuers"
-                CA Issuers - URI:http://trust.quovadisglobal.com/qvsslg2.crt
+$ openssl x509 -in example.com.crt.pem -text -noout | grep -i "Authority Information Access" -A2
+            Authority Information Access: 
+                CA Issuers - URI:http://trust.quovadisglobal.com/quovadiseuropeevsslcag1.crt
+                OCSP - URI:http://ocsp.quovadisglobal.com
 ```
