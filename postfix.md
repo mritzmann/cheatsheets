@@ -1,5 +1,17 @@
 # Postfix
 
+## View Mail Queue
+
+```shell
+mailq
+```
+
+## View E-Mail in Mail Queue
+
+```shell
+postcat -vq 0E0401614D3
+```
+
 ## Grep and delete
 
 ```shell
