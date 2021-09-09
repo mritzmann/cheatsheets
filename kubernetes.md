@@ -77,3 +77,10 @@ spec:
             cpu: 20m
             memory: 32Mi
 ```
+
+## Node
+
+```shell
+# list
+kubectl get node -o wide
+```
