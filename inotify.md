@@ -4,7 +4,7 @@ Debian package name: `inotify-tools`
 
 ## Watch for new Files
 
-```
+```shell
 inotifywait -m /path/to/folder -e create -e moved_to |
     while read dir action file; do
         echo "The file '$file' appeared in directory '$dir' via '$action'"
