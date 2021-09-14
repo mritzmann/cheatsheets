@@ -84,3 +84,11 @@ spec:
 # list
 kubectl get node -o wide
 ```
+
+## Secrets
+
+Get secrets
+
+```shell
+kubectl get secret regcred --output=yaml
+```
