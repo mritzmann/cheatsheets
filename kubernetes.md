@@ -24,7 +24,7 @@ kubectl config set-context --current --namespace=apps
 ```shell
 # jump into existing container
 kubectl exec --stdin --tty nginx-796495895c-qkj89 -- /bin/bash
-
+```
 
 ## Run
 
