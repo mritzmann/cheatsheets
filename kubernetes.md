@@ -19,6 +19,13 @@ kubectl delete namespace myapp
 kubectl config set-context --current --namespace=apps
 ```
 
+## Run
+
+```shell
+# run, exec and remove a container for debugging purpose
+kubectl run toolbox --namespace apps --rm -i --tty --image debian -- bash
+```
+
 ## Pod
 
 * Metalayer around one or more containers
