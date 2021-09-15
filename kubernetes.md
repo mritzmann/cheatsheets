@@ -19,10 +19,17 @@ kubectl delete namespace myapp
 kubectl config set-context --current --namespace=apps
 ```
 
+## Exec
+
+```shell
+# jump into existing container
+kubectl exec --stdin --tty nginx-796495895c-qkj89 -- /bin/bash
+
+
 ## Run
 
 ```shell
-# run, exec and remove a container for debugging purpose
+# run a new container for debugging purpose
 kubectl run toolbox --namespace apps --rm -i --tty --image debian -- bash
 ```
 
