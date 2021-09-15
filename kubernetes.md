@@ -14,6 +14,9 @@ kubectl get namespace
 
 # delete
 kubectl delete namespace myapp
+
+# set default namespace
+kubectl config set-context --current --namespace=apps
 ```
 
 ## Pod
