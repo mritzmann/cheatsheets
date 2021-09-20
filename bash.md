@@ -16,3 +16,9 @@
 ```
 
 source and more: https://tldp.org/LDP/abs/html/fto.html
+
+## Redirect to Terminal and File
+
+```shell
+command 2>&1 | tee out.log
+```
