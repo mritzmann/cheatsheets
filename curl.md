@@ -1,5 +1,11 @@
 # cURL
 
+Ignore Proxy:
+
+```shell
+curl --noproxy '*' https://example.com
+```
+
 Provide a custom address for a specific host and port pair:
 
 ```shell
