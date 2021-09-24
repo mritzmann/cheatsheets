@@ -2,7 +2,7 @@
 
 Hint why a package is installed:
 
-```
+```shell
 $ apt-cache rdepends --installed libproxy1v5
 libproxy1v5
 Reverse Depends:
