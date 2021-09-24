@@ -88,3 +88,7 @@ location = /favicon.ico {
    try_files /favicons/$http_host.ico /favicons/default.ico;
 }
 ```
+
+## Useful Links
+
+* https://nginx-playground.wizardzines.com/
