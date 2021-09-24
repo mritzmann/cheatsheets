@@ -3,9 +3,9 @@
 ## Create
 
 ```shell
-# uncompressed
+# uncompress
 tar -cvf ~/archive.tar ~/
 
-# compressed
+# compress
 tar -czvf ~/archive.tar.gz ~/
 ```
