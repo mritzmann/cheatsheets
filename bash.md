@@ -1,6 +1,6 @@
 # Bash
 
-## test file
+## Test File
 
 ```
 -e      file exists
