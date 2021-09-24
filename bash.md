@@ -17,8 +17,13 @@
 
 source and more: https://tldp.org/LDP/abs/html/fto.html
 
-## Redirect to Terminal and File
+## Redirections
 
-```shell
-command 2>&1 | tee out.log
-```
+| File Descriptor | Purpose         | Example                                          |
+| --------------- | --------------- | ------------------------------------------------ |
+| 0               | Standard input  |                                                  |
+| 1               | Standard output | `command 1> output.txt` / `command > output.txt` |
+| 2               | Standard error  | `command 2> output.txt`                          |
+
+* Redirect standard and error output: `command &> output.txt`
+* Redirect to terminal and file: `command 2>&1 | tee out.log`
