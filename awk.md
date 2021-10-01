@@ -4,8 +4,7 @@ Tested with `gawk` (GNU Awk).
 
 ## General
 
-* Per default awk expects input on standard in
-* Per default awk expects output on standard out
+* Per default awk expects input on standard in and output on standard out
 * Awk refers to each line as a `record` and each column as a `field`
 
 ## Print
@@ -81,7 +80,7 @@ The Hitchhikers Guide to the Galaxy
 | ---------------------------------- | ---------------------------------------------------------------------------- |
 | `/bb/ { print $2 }`                | match records with `bb` and print the second field                           |
 | `$2 == "two" { print $3 }`         | match records if the second field is exact `two` and print the third field   |
-| `$2 ~ /two/ { print $3 }`          | match records if the second field match the regex and print the thierd filed |
+| `$2 ~ /two/ { print $3 }`          | match records if the second field match the regex and print the thierd field |
 
 Examples:
 
@@ -103,7 +102,7 @@ three
 ```
 
 ```shell
-# match records if the second field match the regex and print the thierd filed
+# match records if the second field match the regex and print the thierd field
 $ echo "
  one two three
  four five six" \
