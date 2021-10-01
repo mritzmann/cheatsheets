@@ -3,7 +3,7 @@
 DNS Template for empty Domains.
 
 ```shell
-# Prevents sender spoofing for domains which do not send emails anyway.
+# Prevents sender spoofing for domains which do not send emails
 example.com         IN  TXT  v=spf1 -all
 _dmarc.example.com  IN  TXT  p=reject
 
