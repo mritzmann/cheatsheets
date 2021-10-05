@@ -109,3 +109,16 @@ Get secrets
 ```shell
 kubectl get secret regcred --output=yaml
 ```
+
+## Tools
+
+* [k9s](https://github.com/derailed/k9s) - provides a terminal UI to interact with Kubernetes
+```shell
+brew install k9s
+k9s --namespace myapp
+```
+* [k3d](https://github.com/rancher/k3d) - lightweight wrapper to run k3s in docker
+```shell
+brew install k3d
+k3d cluster create mycluster --api-port 6550 -p "80:80@loadbalancer"
+```
