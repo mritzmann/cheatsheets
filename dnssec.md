@@ -8,7 +8,35 @@
 * `NSEC` / `NSEC3`: For explicit denial-of-existence of a DNS record
 * `CDNSKEY` / `CDS`: For a child zone requesting updates to DS record(s) in the parent zone
 
-## Chain of trust.
+## RRsets
+
+* All records with the same label and type are bundled into a single RRset
+* Each RRset will be signed, dnssec does not sign individual records
+
+```
+Label:        Type:
+↓             ↓
+                                 ┌╴
+www     IN    A       127.0.0.1  │  RRset
+                                 ├╴
+blog    IN    A       127.0.0.1  │  RRset
+                                 ├╴
+api     IN    A       127.0.0.1  │  RRset
+api     IN    A       127.0.0.2  │
+                                 ├╴
+api     IN    TXT     test       │  RRset
+                                 └╴
+```
+
+## Zone Signing Key (ZSK)
+
+* The nameserver operator need to generate a zone signing key pair (ZSK)
+* A ZSK consists of a private and public key
+* The public ZSK is published as `DNSKEY`-record
+* Every RRset get a signature created with the private ZSK
+* This signatur will be published as a `RRSIG`-record
+
+## Chain of trust
 
 * Every child zone and their parent zone have a `DS` / `DNSKEY` pair
 
