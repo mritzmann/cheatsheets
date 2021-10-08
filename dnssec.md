@@ -1,6 +1,16 @@
 # DNSSEC
 
+## DNS Record Types
+
+* `RRSIG`: Contains a cryptographic signature
+* `DNSKEY`: Contains a public signing key
+* `DS`: Contains the hash of a DNSKEY record
+* `NSEC` / `NSEC3`: For explicit denial-of-existence of a DNS record
+* `CDNSKEY` / `CDS`: For a child zone requesting updates to DS record(s) in the parent zone
+
 ## Chain of trust.
+
+* Every child zone and their parent zone have a `DS` / `DNSKEY` pair
 
 ```
 | . (root)   |       | org.             |       | example.org.         |       | sub.example.org. |
