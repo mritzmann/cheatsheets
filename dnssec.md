@@ -16,16 +16,17 @@
 ```
 Label:        Type:
 ↓             ↓
-                                 ┌╴
-www     IN    A       127.0.0.1  │  RRset
-                                 ├╴
-blog    IN    A       127.0.0.1  │  RRset
-                                 ├╴
-api     IN    A       127.0.0.1  │  RRset
-api     IN    A       127.0.0.2  │
-                                 ├╴
-api     IN    TXT     test       │  RRset
-                                 └╴
+                                  ┌╴
+www     IN    A       127.0.0.1   │  RRset
+                                  ├╴
+blog    IN    A       127.0.0.1   │  RRset
+                                  ├╴
+api     IN    A       127.0.0.1   │  RRset
+api     IN    A       127.0.0.2   │
+                                  ├╴
+api     IN    TXT     test1       │  RRset
+api     IN    TXT     test2       │
+                                  └╴
 ```
 
 ## Zone Signing Key (ZSK)
@@ -35,6 +36,10 @@ api     IN    TXT     test       │  RRset
 * The public ZSK is published as `DNSKEY`-record
 * Every RRset get a signature created with the private ZSK
 * This signatur will be published as a `RRSIG`-record
+
+```
+RRset (Requested DNS Record) + RRSIG (Signature) + DNSKEY (Public ZSK) = Verified RRset
+```
 
 ## Chain of trust
 
