@@ -14,8 +14,7 @@
 * Each RRset will be signed, dnssec does not sign individual records
 
 ```
-Label:        Type:
-↓             ↓
+↓ Label       ↓ Type
                                   ┌╴
 www     IN    A       127.0.0.1   │  RRset
                                   ├╴
