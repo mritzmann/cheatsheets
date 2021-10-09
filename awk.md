@@ -1,6 +1,7 @@
 # awk
 
-Tested with `gawk` (GNU Awk).
+* Tested with `gawk` (GNU Awk) but everything should also work with `mawk`
+* For debian based systems `awk` is symliked to `mawk`, which is pre-installed
 
 ## General
 
