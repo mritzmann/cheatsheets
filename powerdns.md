@@ -2,11 +2,11 @@
 
 ```shell
 # increase soa serial
-pdnsutil increase-serial ops-one.net
+pdnsutil increase-serial example.com
 
 # dnssec: sign zone
-pdnsutil secure-zone ops-one.net
+pdnsutil secure-zone example.com
 
 # dnssec: show key
-pdnsutil show-zone ops-one.net
+pdnsutil show-zone example.com
 ```
