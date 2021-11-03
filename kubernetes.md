@@ -95,6 +95,10 @@ spec:
             memory: 32Mi
 ```
 
+## Service
+
+* An ressource to expose an application running on a set of Pods as a network service
+
 ## Node
 
 ```shell
