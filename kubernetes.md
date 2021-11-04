@@ -129,6 +129,12 @@ kubectl get node -o wide
 
 ## Secrets
 
+Create secret
+
+```
+kubectl create secret generic <name> --from-file=<name1>=/tmp/test1 --from-file=<name2>=/tmp/teset2
+```
+
 Get secrets
 
 ```shell
