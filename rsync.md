@@ -1,7 +1,7 @@
 # Rsync
 
 ```shell
-rsync -avz --delete <user>@<server>:/home/<user> /home/
+rsync -avz --delete <user>@<server>:/home/user/ /home/user/
 ```
 
 * `-a`: archive mode
