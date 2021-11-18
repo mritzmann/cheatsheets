@@ -8,3 +8,4 @@ rsync -avz --delete <user>@<server>:/home/user/ /home/user/
 * `-v`: increase verbosity
 * `-z`: compress file data during the transfer
 * `--delete`: delete extraneous files from dest dirs
+* `--exclude=PATTERN`: exclude files matching PATTERN
