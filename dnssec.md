@@ -4,7 +4,25 @@
 
 * `RRSIG`: Contains a cryptographic signature
 * `DNSKEY`: Contains a public signing key
+```
+$ dig +short markusritzmann.ch dnskey          
+257   3   13   2/ELdOo4TnB8Wcgm6kvJnRkLG8Z8fAA1uJrxdhxc6caCC+xfm/1WaPk9 b3II1y040n+c1qNzBY1vlCAQB0PphQ==
+ ▲     ▲    ▲                              ▲
+ │     │    │                              │
+ │     │  Algorithm                    Public Key
+ │  Protocol
+Flags
+```
 * `DS`: Contains the hash of a DNSKEY record
+```
+$ dig +short @a.nic.ch markusritzmann.ch ds
+5780   13   2 FBFD10E8E9B834218AD5B96B794C390E8E479E689BECC55C5004BE7E 95621960
+ ▲     ▲    ▲                              ▲
+ │     │    │                              │
+ │     │  Digest Type (Hash Type)        Digest (Hash)
+ │  Algorithm
+Tey Tag
+```
 * `NSEC` / `NSEC3`: For explicit denial-of-existence of a DNS record
 * `CDNSKEY` / `CDS`: For a child zone requesting updates to DS record(s) in the parent zone
 
@@ -54,3 +72,10 @@ RRset (Requested DNS Record) + RRSIG (Signature) + DNSKEY (Public ZSK) = Verifie
 ```
 
 (Diagram: Original by [@jpmens](https://jpmens.net/2021/06/09/visualizing-the-dnssec-chain-of-trust/))
+
+## EPP
+
+EPP knows two interfaces. `dsData` or `keyData`.
+
+* `dsData`: The DS record
+* `dsKey`: The DNSKEY record (the registrar then converts that to the DS record)
