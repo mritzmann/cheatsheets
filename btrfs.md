@@ -1,38 +1,17 @@
 # Btrfs
 
-## Create Snapshot
+## Snapshots
+
+Create read-only snapshot:
 
 ```shell
-# create read-only snapshot
 btrfs sub snap -r /path/to/source /path/to/target
+```
 
-# create snapshot
+Create writable snapshot:
+
+```shell
 btrfs sub snap /path/to/source /path/to/target
-```
-
-## Diff between Snapshots
-
-> This tool can show you what folders have the most changed data between snapshots
-
-https://github.com/rkapl/btsdu
-
-```shell
-apt install -y cargo
-cargo install btsdu
-~/.cargo/bin/btsdu -p /snapshot/20201126-0357-day /snapshot/20201127-0357-day
-```
-
-## Quota
-
-```shell
-# enable
-btrfs quota enable /
-
-# show
-btrfs qgroup show /
-
-# disable
-btrfs quota disable /
 ```
 
 ## Send and Receive
@@ -49,68 +28,123 @@ Pull snapshot from another host:
 ssh root@srv01.example.com "btrfs send /path/to/snapshot" | pv | btrfs receive /path/to/snapshot
 ```
 
+## Quota
+
+Btrfs quota may require a lot of performance (depending on the number of files and snapshots) and should therefore be deactivated.
+
+Enable:
+
+```shell
+btrfs quota enable /
+```
+
+Show:
+
+```shell
+btrfs qgroup show /
+```
+
+Disable:
+
+```
+btrfs quota disable /
+```
+
+## Sync
+
+If you delete a subvolume with `btrfs sub delete`, you should not reboot the system until the subvolume is really gone.
+You can check this with the `btrfs sub sync` command.
+
+```shell
+$ btrfs sub sync /                                      
+Subvolume id 276 is gone
+```
+
 ## Disabling COW (NODATACOW)
 
 Disabling or enabling COW only works on 0 byte sized files.
 
-- Turn off COW on file or folder: `chattr +C file`
-- Turn on COW on file or folder: `chattr -C file`
-- See if COW is on or off for file: `lsattr filename`
-- See if COW is on or off for directory: `lsattr -d directory`
+Turn COW on files and folder:
+
+- Off: `chattr +C file`
+- On: `chattr -C file`
+
+See if COW is on or off:
+
+- For files: `lsattr filename`
+- For directorys: `lsattr -d directory`
 
 ## Set Subvolume to Read-only
 
+Set to read-only:
+
 ```shell
-# set to read-only
 btrfs property set -ts /path/to/subvolume ro true
+```
 
-# disable read-only
+Disable read-only:
+
+```shell
 btrfs property set -ts /path/to/subvolume ro false
-```
-
-## Restore to Snapshot
-
-```shell
-# get subvolume id
-btrfs sub list /
-
-# set subvolume id as default
-btrfs subvolume set-default <ID> /
-```
-
-## Show Compression Ratio
-
-> compsize takes a list of files (given as arguments) on a btrfs filesystem and measures used compression types and effective compression ratio, producing a report
-
-https://github.com/kilobyte/compsize
-
-```shell
-# make
-git clone https://github.com/kilobyte/compsize.git
-cd compsize
-make
-
-# debian: or install
-apt-get -y install btrfs-compsize
-
-compsize /path/to/file
 ```
 
 ## Btrfs Processes 
 
-- `btrfs-cleaner`: A possible cause for a high disk I/O load are deleted or created snapshots and the recalculation of btrfs quota. You can disable btrfs quota with `btrfs quota disable <path>`. Source: [spinics.net](https://www.spinics.net/lists/linux-btrfs/msg74737.html)
+- `btrfs-cleaner`: A possible cause for a high disk I/O load are deleted or created snapshots and the recalculation of btrfs quota. Source: [spinics.net](https://www.spinics.net/lists/linux-btrfs/msg74737.html)
 - `btrfs-transacti`
 
-Kernel threads (`kworker`):
-
-Are shown in `htop` witch shift-k.
+Kernel threads (`kworker`) are shown in `htop` witch <kbd>shift-k</kbd>:
 
 - `btrfs-endio-write`
 - `btrfs-endio-meta`
 - `btrfs-worker`
 
-## nspawn
+## Tools
 
-> `systemd-nspawn -x -D /` will create a snapshot of your `/`, chroot into it, and delete it on exit. Works for xfs and btrfs
+### Btsdu - Btrfs Snapshot Disk Usage Analyzer
+
+> This tool can show you what folders have the most changed data between snapshots
+
+https://github.com/rkapl/btsdu
+
+```shell
+apt install -y cargo
+cargo install btsdu
+~/.cargo/bin/btsdu -p /snapshot/20201126-0357-day /snapshot/20201127-0357-day
+```
+
+### Systemd-nspawn - Spawn a command or OS in a light-weight container
+
+> Nspawn will create a snapshot, chroot into it, and delete it on exit. Works for xfs and btrfs.
 
 https://www.reddit.com/r/linux/comments/ncw7xc/btrfs_use_cases/gy88mnc/
+
+```shell
+systemd-nspawn -x -D /
+```
+
+### Compsize - Find compression type/ratio on a file
+
+> compsize takes a list of files on a btrfs filesystem and measures used compression types and effective compression ratio, producing a report
+
+https://github.com/kilobyte/compsize
+
+Install:
+
+```shell
+apt-get -y install btrfs-compsize
+```
+
+Or make:
+
+```shell
+git clone https://github.com/kilobyte/compsize.git
+cd compsize
+make
+```
+
+Use:
+
+```shell
+compsize /path/to/file
+```
