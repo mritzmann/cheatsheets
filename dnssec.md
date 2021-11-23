@@ -21,7 +21,7 @@ $ dig +short @a.nic.ch markusritzmann.ch ds
  │     │    │                              │
  │     │  Digest Type (Hash Type)        Digest (Hash)
  │  Algorithm
-Tey Tag
+Key Tag
 ```
 * `NSEC` / `NSEC3`: For explicit denial-of-existence of a DNS record
 * `CDNSKEY` / `CDS`: For a child zone requesting updates to DS record(s) in the parent zone
