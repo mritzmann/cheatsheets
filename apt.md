@@ -1,4 +1,10 @@
-# apt
+# APT (Package Manager for Debian)
+
+Install a specific version:
+
+```shell
+apt-get install <package>=<version>
+```
 
 Hint why a package is installed:
 
