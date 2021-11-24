@@ -28,8 +28,8 @@ Key Tag
 
 ## RRsets
 
-* All records with the same label and type are bundled into a single RRset
-* Each RRset will be signed, dnssec does not sign individual records
+* All records with the same label (owner name), network class (`IN`), and type are bundled into a single RRset
+* Each RRset will be signed, DNSSEC does not sign individual records
 
 ```
 ↓ Label       ↓ Type
@@ -48,14 +48,14 @@ api     IN    TXT     test2       │
 
 ## Zone Signing Key (ZSK)
 
-* The nameserver operator need to generate a zone signing key pair (ZSK)
+* The nameserver operator needs to generate a zone signing key pair (ZSK)
 * A ZSK consists of a private and public key
 * The public ZSK is published as `DNSKEY`-record
 * Every RRset get a signature created with the private ZSK
 * This signatur will be published as a `RRSIG`-record
 
 ```
-RRset (Requested DNS Record) + RRSIG (Signature) + DNSKEY (Public ZSK) = Verified RRset
+RRset (Requested DNS Record set) + RRSIG (Signature) + DNSKEY (Public ZSK) = Verified RRset
 ```
 
 ## Chain of trust
