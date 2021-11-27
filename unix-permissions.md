@@ -48,3 +48,15 @@ chmod g+s /path/to/executable
 # remove
 chmod g-s /path/to/executable
 ```
+
+## User Mask
+
+The user mask determines the permissions with which new files are created. The current user mask can be viewed with `umask`.
+
+```shell
+# display current mask (octal)
+umask
+
+# display current mask (symbolically)
+umask -S
+```
