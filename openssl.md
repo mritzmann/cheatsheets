@@ -20,12 +20,6 @@ From DER to plain:
 openssl x509 -inform der -in <file>.crt -out <file>.crt
 ```
 
-Find intermediate cert from site cert:
-
-```shell
-openssl x509 -in <file>.crt.pem -text -noout | grep -i 'CA Issuers'
-```
-
 ## Read Cert
 
 ```shell
