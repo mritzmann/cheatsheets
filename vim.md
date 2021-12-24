@@ -7,3 +7,7 @@ Insert text at beginning of a multi-line selection:
 3. select lines with <kbd>up/down</kbd>
 4. hit <kbd>Shift+i</kbd> and type the text you want to insert
 5. hit <kbd>Esc</kbd>, and the inserted text will appear on every line
+
+Delete word: <kbd>diw</kbd>
+
+Delete around word:  <kbd>daw</kbd>
