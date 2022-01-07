@@ -44,3 +44,13 @@ nft list chains
 # monitor rule changes
 nft monitor
 ```
+
+## Defaults
+
+Debian:
+
+| Version              | Default Firewall Backend |
+| :------------------- | :----------------------- |
+| Debian  9 (Stretch)  | iptables
+| Debian 10 (Buster)   | nftables
+| Debian 11 (Bullseye) | nftables
