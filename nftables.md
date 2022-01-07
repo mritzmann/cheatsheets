@@ -41,6 +41,9 @@ nft list tables
 # list chains
 nft list chains
 
+# list ruleset
+nft list ruleset
+
 # monitor rule changes
 nft monitor
 ```
