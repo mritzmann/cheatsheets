@@ -8,6 +8,7 @@
 ```bash
 #!/usr/sbin/nft -f
 
+# deletes all rules before they are created again in the following steps
 flush ruleset
 
 table inet filter {
