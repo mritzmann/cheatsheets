@@ -161,3 +161,11 @@ k9s --namespace myapp
 brew install k3d
 k3d cluster create mycluster --api-port 6550 -p "80:80@loadbalancer"
 ```
+* [Helm](https://helm.sh/) - The package manager for Kubernetes
+```shell
+brew install helm
+```
+* [Lens](https://k8slens.dev/) - The Kubernetes IDE
+```shell
+brew install --cask lens
+```
