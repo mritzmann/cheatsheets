@@ -129,16 +129,24 @@ kubectl get node -o wide
 
 ## Secrets
 
-Create secret
+### Create secret
 
 ```
-kubectl create secret generic <name> --from-file=<name1>=/tmp/test1 --from-file=<name2>=/tmp/teset2
+kubectl create secret generic <name> --from-file=<name1>=/tmp/test1 --from-file=<name2>=/tmp/regcred
 ```
 
 Get secrets
 
 ```shell
 kubectl get secret regcred --output=yaml
+```
+
+### Private Registry
+
+Example `--from-file`-file:
+
+```json
+{"auths":{"registry.example.com":{"username":"<token-username>","password":"<token>","email":"<token-username>@example.com"}}}
 ```
 
 ## Tools
