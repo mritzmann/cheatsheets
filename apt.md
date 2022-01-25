@@ -27,3 +27,10 @@ List all files from package:
 ```shell
 dpkg-query -L <package>
 ```
+
+How do I find out which repository a package comes from:
+
+```shell
+apt policy <package>
+apt-cache policy <package>
+```
