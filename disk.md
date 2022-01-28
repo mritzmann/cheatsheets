@@ -1,5 +1,7 @@
 # Linux Disk Management
 
+## Resize Online
+
 Rescan devices:
 
 ```shell
@@ -24,4 +26,31 @@ Resize Btrfs:
 
 ```shell
 btrfs filesystem resize max /
+```
+
+## Mount new Disk
+
+Show all disk and partitions:
+
+```shell
+fdisk -l
+```
+
+Create partition:
+
+```shell
+fdisk <path-to-device>
+fdisk /dev/sdb
+```
+
+Create Filesystem:
+
+```shell
+mkfs.ext4 /dev/sdb1
+```
+
+Mount filesystem:
+
+```shell
+mount /dev/sdb1 /mnt
 ```
