@@ -17,7 +17,7 @@ Will be executed by `pack build` in this order:
 
 ## Pack Cheat Sheet
 
-- **Builder:** A builder is an image that contains all the components necessary to execute a build
+- **Builder:** An image that contains the os layer and a set ot buildpacks
 - **Buildpack:** A set of executables that inspects your app source code and creates a plan to build and run your application
 
 List recommended builders:
