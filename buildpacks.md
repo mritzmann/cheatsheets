@@ -17,11 +17,8 @@ Will be executed by `pack build` in this order:
 
 ## Pack Cheat Sheet
 
-Install `pack`:
-
-```shell
-brew install buildpacks/tap/pack
-```
+- **Builder:** A builder is an image that contains all the components necessary to execute a build
+- **Buildpack:** A set of executables that inspects your app source code and creates a plan to build and run your application
 
 List recommended builders:
 
@@ -32,7 +29,7 @@ pack builder suggest
 Build:
 
 ```shell
-pack build <image-name> --builder <buildpack-to-use>
+pack build <image-name> --builder <builder-to-use>
 pack build testbuild --builder paketobuildpacks/builder:base
 ```
 
