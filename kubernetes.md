@@ -1,5 +1,7 @@
 # Kubernetes
 
+## Overview
+
 ```
 +-------------------------+
 |   Deployment            |
@@ -20,8 +22,25 @@
 +-------------------------+          +----------------+          +----------------+
 ```
 
+## Debugging
 
-## Namespace
+### Exec
+
+```shell
+# jump into existing container
+kubectl exec --stdin --tty nginx-796495895c-qkj89 -- /bin/bash
+```
+
+### Run
+
+```shell
+# run a new container for debugging purpose
+kubectl run toolbox --namespace apps --rm -i --tty --image debian -- bash
+```
+
+## Resource types
+
+### Namespace
 
 * Permission separation
 * Groups all objects which belong to one project together
@@ -40,21 +59,7 @@ kubectl delete namespace myapp
 kubectl config set-context --current --namespace=apps
 ```
 
-## Exec
-
-```shell
-# jump into existing container
-kubectl exec --stdin --tty nginx-796495895c-qkj89 -- /bin/bash
-```
-
-## Run
-
-```shell
-# run a new container for debugging purpose
-kubectl run toolbox --namespace apps --rm -i --tty --image debian -- bash
-```
-
-## Pod
+### Pod
 
 * Metalayer around one or more containers
 
@@ -69,7 +74,7 @@ kubectl get pods --namespace myapp
 kubectl delete pod awesome-app --namespace myapp
 ```
 
-## Deployment
+### Deployment
 
 * Should be used instead of pods
 * Covers update process, health and more
@@ -116,20 +121,7 @@ spec:
             memory: 32Mi
 ```
 
-## Service
-
-* An ressource to expose an application running on a set of Pods as a network service
-
-## Node
-
-```shell
-# list
-kubectl get node -o wide
-```
-
-## Secrets
-
-### Create secret
+### Secrets
 
 ```
 kubectl create secret generic <name> --from-file=<name1>=/tmp/test1 --from-file=<name2>=/tmp/regcred
@@ -147,6 +139,17 @@ Example `--from-file`-file:
 
 ```json
 {"auths":{"registry.example.com":{"username":"<token-username>","password":"<token>","email":"<token-username>@example.com"}}}
+```
+
+### Service
+
+* An ressource to expose an application running on a set of Pods as a network service
+
+## Node
+
+```shell
+# list
+kubectl get node -o wide
 ```
 
 ## Tools
