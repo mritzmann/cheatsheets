@@ -47,7 +47,7 @@ api     IN    TXT     test2       │
                                   └╴
 ```
 
-## Signin Keys
+## Signing Keys
 
 * A DNS zone can be signed with one more more key pairs
 * There are the following two methods for signing your DNS zone 
