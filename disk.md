@@ -54,3 +54,11 @@ Mount filesystem:
 ```shell
 mount /dev/sdb1 /mnt
 ```
+
+## Load / Utilization
+
+I/O monitor:
+
+```shell
+iotop
+```
