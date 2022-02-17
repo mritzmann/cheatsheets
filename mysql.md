@@ -10,10 +10,9 @@ mysqlcheck -A | grep -v OK
 
 If `mysqlcheck` does not work or DB does not start:
 
-```shell
-service mysql stop
-cd /var/lib/mysql/<DB-NAME>
-myisamchk -r <TABLE-NAME>
+```
+echo "innodb_force_recovery=1" >> /etc/mysql/mariadb.cnf
+service mysql start
 ```
 
 ## DB Dump
