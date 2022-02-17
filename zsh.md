@@ -36,7 +36,7 @@ num  calls                time                       self            name
 22)    1           0.01     0.01    0.00%      0.01     0.01    0.00%  nvm_is_zsh
 ```
 
-In this case, nvm is the culprit. It is recommended to load nvm only if needed. In my case I solved this with a function.
+In this case, nvm is the culprit. In my case, I solved this with a function that allows me to load nvm only when I need it.
 
 ```shell
 function init_nvm() {
