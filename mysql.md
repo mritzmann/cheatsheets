@@ -1,12 +1,5 @@
 # MySQL
 
-## Process List
-
-```mysql
-show processlist;
-SHOW FULL PROCESSLIST;
-```
-
 ## Repair
 
 If DB is running but a table is corrupt:
@@ -34,50 +27,73 @@ mysqldump --single-transaction $DB_NAME > dump.sql
            database at the time when BEGIN was issued without blocking any
            applications.
 
-## Database
+## Basics
 
-```mysql
-# list all
+### Database
+
+List all databases:
+
+```sql
 SHOW DATABASES;
+```
 
-# use database
+Use database:
+
+```sql
 USE db_name;
 ```
 
-## Table
+### Table
 
-```mysql
-# list all
+List all tables:
+
+```sql
 SHOW TABLES;
 ```
 
-## Columns
+### Columns
 
-```mysql
-# list all
+List all columns:
+
+```sql
 SHOW COLUMNS FROM table_name;
 ```
 
-## Select
+### Select
 
-```mysql
-# select 
+Select:
+
+```sql
 SELECT * FROM table_name
+```
 
-# search
-# - search for 'no wanted headers' in returned_text
-# - and returns values in colum user1
+Search:
+
+```sql
+# search for 'no wanted headers' in returned_text
+# and returns values in colum user1
 SELECT user1 FROM imapsync WHERE returned_text LIKE '%no wanted headers%';
 ```
 
-## Update
+### Update
 
 ```sql
 # set auto_archive to 1, where auto_archive is set to 0
 UPDATE segment SET auto_archive = '1' WHERE auto_archive = '0';
 ```
 
-## Compare Tables from different Databases
+### Process List
+
+List running sql queries:
+
+```sql
+show processlist;
+SHOW FULL PROCESSLIST;
+```
+
+## Snippets
+
+### Compare Tables from different Databases
 
 ```sql
 # compare 'id' from table 'table' from db 'db1' with
