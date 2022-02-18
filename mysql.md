@@ -1,5 +1,12 @@
 # MySQL
 
+## Process List
+
+```mysql
+show processlist;
+SHOW FULL PROCESSLIST;
+```
+
 ## Repair
 
 If DB is running but a table is corrupt:
