@@ -76,7 +76,7 @@ service mysql start
 Reorganizes the storage of table data and associated index data, to reduce storage space and improve I/O efficiency when accessing the table.
 
 ```sql
-OPTIMIZE TABLE `matomo_log_visit`
+OPTIMIZE TABLE `matomo_log_visit`;
 ```
 
 ## CLI Commands
