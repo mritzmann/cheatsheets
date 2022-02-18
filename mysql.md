@@ -1,32 +1,5 @@
 # MySQL
 
-## Repair
-
-If DB is running but a table is corrupt:
-
-```shell
-mysqlcheck -A | grep -v OK
-```
-
-If `mysqlcheck` does not work or DB does not start:
-
-```
-echo "innodb_force_recovery=1" >> /etc/mysql/mariadb.cnf
-service mysql start
-```
-
-## DB Dump
-
-```shell
-mysqldump --single-transaction $DB_NAME > dump.sql
-```
-
-* `--single-transaction`: This option sends a `START TRANSACTION` SQL statement to the server
-           before dumping data. It is useful only with transactional tables
-           such as InnoDB, because then it dumps the consistent state of the
-           database at the time when BEGIN was issued without blocking any
-           applications.
-
 ## Basics
 
 ### Database
@@ -61,26 +34,62 @@ SHOW COLUMNS FROM table_name;
 
 ### Select
 
-Select:
+Select everything from table:
 
 ```sql
 SELECT * FROM table_name
 ```
 
-Search:
+Search for `no wanted headers` in column `returned_text` in table `imapsync` and return value in column `user1`:
 
 ```sql
-# search for 'no wanted headers' in returned_text
-# and returns values in colum user1
 SELECT user1 FROM imapsync WHERE returned_text LIKE '%no wanted headers%';
 ```
 
 ### Update
 
+Set `auto_archive` to `1`, where `auto_archive` is set to `0`:
+
 ```sql
-# set auto_archive to 1, where auto_archive is set to 0
 UPDATE segment SET auto_archive = '1' WHERE auto_archive = '0';
 ```
+
+## Maintenance
+
+### Repair
+
+If DB is running but a table is corrupt:
+
+```shell
+mysqlcheck -A | grep -v OK
+```
+
+If `mysqlcheck` does not work or DB does not start:
+
+```shell
+echo "innodb_force_recovery=1" >> /etc/mysql/mariadb.cnf
+service mysql start
+```
+
+### Optimize table
+
+Reorganizes the storage of table data and associated index data, to reduce storage space and improve I/O efficiency when accessing the table.
+
+```sql
+OPTIMIZE TABLE `matomo_log_visit`
+```
+
+## CLI Commands
+
+### Dump DB to File
+
+```shell
+mysqldump --single-transaction $DB_NAME > dump.sql
+```
+
+* `--single-transaction`: Sends a `START TRANSACTION` SQL statement to the server before dumping data.
+                          It is useful only with transactional tables such as InnoDB, because then it dumps the consistent
+                          state of the database at the time when BEGIN was issued without blocking any applications.
 
 ### Process List
 
@@ -95,9 +104,9 @@ SHOW FULL PROCESSLIST;
 
 ### Compare Tables from different Databases
 
+Compare 'id' from table 'table' from db 'db1' with 'id' from table 'table' from db 'db2':
+
 ```sql
-# compare 'id' from table 'table' from db 'db1' with
-# 'id' from table 'table' from db 'db2'
 SELECT id
 FROM db1.table
 WHERE id NOT IN
