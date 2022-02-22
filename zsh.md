@@ -1,6 +1,6 @@
 # Z Shell (zsh)
 
-## Perfomance Profiling
+## Perfomance Profiling with Zprof
 
 Allows to find out why ZSH starts slowly. To do this, edit the `$HOME/.zshrc` file as follows:
 
@@ -44,4 +44,12 @@ function init_nvm() {
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 }
+```
+
+## Debugging with `-v`
+
+Outputs everything that happens while loading the ZSH Shell.
+
+```shell
+ssh user@srv01.example.com "zsh -i -v"
 ```
