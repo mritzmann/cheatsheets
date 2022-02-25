@@ -55,6 +55,15 @@ Mount filesystem:
 mount /dev/sdb1 /mnt
 ```
 
+## Create RAM Disk
+
+Create & mount `tmpfs`-RAM-disk:
+
+```shell
+mkdir /mnt/ramdisk
+mount -t tmpfs -o size=210G tmpfs /mnt/ramdisk
+```
+
 ## Load / Utilization
 
 I/O monitor:
