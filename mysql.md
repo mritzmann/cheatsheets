@@ -54,6 +54,14 @@ Set `auto_archive` to `1`, where `auto_archive` is set to `0`:
 UPDATE segment SET auto_archive = '1' WHERE auto_archive = '0';
 ```
 
+### Count
+
+Count rows in table `wp_users`:
+
+```sql
+SELECT COUNT(*) FROM wp_users;
+```
+
 ## Maintenance
 
 ### Repair
