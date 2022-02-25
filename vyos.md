@@ -20,4 +20,7 @@ commit
 
 # persists the change
 save
+
+# show routes to ip
+show ip bgp 8.8.8.8
 ```
