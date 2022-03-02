@@ -87,6 +87,26 @@ Reorganizes the storage of table data and associated index data, to reduce stora
 OPTIMIZE TABLE `matomo_log_visit`;
 ```
 
+## Primary Replica (MariaDB)
+
+Start:
+
+```sql
+START SLAVE;
+```
+
+Stop:
+
+```sql
+STOP SLAVE;
+```
+
+Status:
+
+```sqsl
+SHOW SLAVE STATUS \G
+```
+
 ## CLI Commands
 
 ### Dump DB to File
