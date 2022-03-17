@@ -75,7 +75,7 @@ mysqlcheck -A | grep -v OK
 If `mysqlcheck` does not work or DB does not start:
 
 ```shell
-echo "innodb_force_recovery=1" >> /etc/mysql/mariadb.cnf
+echo "innodb_force_recovery=1" >> /etc/mysql/my.cnf
 service mysql start
 ```
 
