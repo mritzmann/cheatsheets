@@ -101,6 +101,12 @@ Kernel threads (`kworker`) are shown in `htop` witch <kbd>shift-k</kbd>:
 
 ## Tools
 
+### Btdu - Sampling Disk Usage Profiler for Btrfs
+
+> By nature of its algorithm, btdu works correctly with compression and other btrfs filesystem features
+
+https://github.com/CyberShadow/btdu
+
 ### Btsdu - Btrfs Snapshot Disk Usage Analyzer
 
 > This tool can show you what folders have the most changed data between snapshots
