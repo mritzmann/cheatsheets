@@ -54,6 +54,17 @@ Every 2 hours.
 0 0 * AUG SUN /script.sh
 ```
 
+```
+0 - SUN      Sunday
+1 - MON      Monday
+2 - TUE      Tuesday
+3 - WED      Wednesday
+4 - THU      Thursday
+5 - FRI      Friday
+6 - SAT      Saturday
+7 - SUN      Sunday
+```
+
 ## Special shortcuts
 
 ```
