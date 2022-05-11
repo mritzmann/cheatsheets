@@ -104,6 +104,10 @@ dnsviz probe switch.ch | dnsviz print
 # generate graph
 dnsviz probe -A -a . switch.ch | dnsviz graph -T png -O
 ```
+* Google DNS (shows dnssec errors as comments)
+```shell
+curl -s https://dns.google/resolve\?name\=example.com\&type\=A | jq .Comment
+```
 
 ## Reference
 
