@@ -105,8 +105,9 @@ dnsviz probe switch.ch | dnsviz print
 dnsviz probe -A -a . switch.ch | dnsviz graph -T png -O
 ```
 * Google DNS (shows dnssec errors as comments)
-```shell
-curl -s https://dns.google/resolve\?name\=example.com\&type\=A | jq .Comment
+```
+$ curl -s https://dns.google/resolve\?name\=dnssec-failed.org | jq .Comment 
+"DNSSEC validation failure. Check http://dnsviz.net/d/dnssec-failed.org/dnssec/ and http://dnssec-debugger.verisignlabs.com/dnssec-failed.org for errors"
 ```
 
 ## Reference
