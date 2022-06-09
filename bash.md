@@ -1,6 +1,6 @@
 # Bash
 
-## Test File
+## Test Operators
 
 ```
 -e      file exists
@@ -15,7 +15,7 @@
 -O      you are owner of file
 ```
 
-source and more: https://tldp.org/LDP/abs/html/fto.html
+More: https://tldp.org/LDP/abs/html/fto.html
 
 ## Redirections
 
@@ -27,3 +27,29 @@ source and more: https://tldp.org/LDP/abs/html/fto.html
 
 * Redirect standard and error output: `command &> output.txt`
 * Redirect to terminal and file: `command 2>&1 | tee out.log`
+
+More: https://www.gnu.org/software/bash/manual/html_node/Redirections.html
+
+## If and Else
+
+```bash
+if test-command; then
+  command
+fi
+```
+
+```bash
+if test-command; then
+  command
+else
+  command
+fi
+```
+
+```bash
+if test-command; then
+  command
+elif test-command; then
+  command
+fi
+```
