@@ -20,6 +20,12 @@ From DER to plain:
 openssl x509 -inform der -in <file>.crt -out <file>.crt
 ```
 
+## Remove Password
+
+```shell
+openssl rsa -in <key-with-password>.key -out <key-without-password>.key
+```
+
 ## Read Cert
 
 ```shell
