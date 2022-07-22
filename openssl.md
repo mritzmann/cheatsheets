@@ -68,3 +68,9 @@ $ openssl x509 -in example.com.crt.pem -text -noout | grep -i "Authority Informa
                 CA Issuers - URI:http://trust.quovadisglobal.com/quovadiseuropeevsslcag1.crt
                 OCSP - URI:http://ocsp.quovadisglobal.com
 ```
+
+## Test IMAP
+
+```shell
+openssl s_client -connect imap-mail.outlook.com:993 -crlf -quiet
+```
