@@ -89,6 +89,16 @@ location = /favicon.ico {
 }
 ```
 
+## Host Redirect
+
+([If is Evil](https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/))
+
+```nginx
+if ($host != “www.example.com”) {
+    return  301 $scheme://www.example.com$request_uri;
+}
+```
+
 ## Useful Links
 
 * https://nginx-playground.wizardzines.com/
