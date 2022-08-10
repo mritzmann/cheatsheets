@@ -13,6 +13,16 @@ rsync -avz --delete <user>@<server>:/home/user/ /home/user/
 * `--exclude=PATTERN`: exclude files matching PATTERN
 * `--info=progress2`: statistics
 
+## Jump Host
+
+* `-e`: specify the remote shell to use
+
+Copy from `srv01.example.com` to local over `jump01.example.com`:
+
+```shell
+rsync -avz -e "ssh -J user@jump01.example.com" user@srv01.example.com:/path/to/source/ /path/to/target/
+```
+
 ## Mass Delete
 
 If you want to delete a directory with several million files, `rm -rf folder` is extremely slow. `rsync` is faster.
