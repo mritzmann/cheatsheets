@@ -141,3 +141,11 @@ WHERE id NOT IN
     (SELECT id
      FROM db2.table);
 ```
+
+### Binary Logs
+
+Delete all binary logs.
+
+```shell
+RESET MASTER;
+```
