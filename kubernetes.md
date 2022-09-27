@@ -22,6 +22,11 @@
 +-------------------------+          +----------------+          +----------------+
 ```
 
+## Cluster Access
+
+* Default cluster: `$HOME/.kube/config`
+* Set othe cluster: `KUBECONFIG=~/.kube/server.yaml kubectl ..`
+
 ## Debugging
 
 ### Exec
