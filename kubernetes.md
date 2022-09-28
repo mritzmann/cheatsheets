@@ -48,7 +48,7 @@ graph LR
 ## Cluster Access
 
 * Default cluster: `$HOME/.kube/config`
-* Set othe cluster: `KUBECONFIG=~/.kube/server.yaml kubectl ..`
+* Use othe cluster: `KUBECONFIG=~/.kube/server.yaml kubectl ..`
 * Forward Kubernetes API: `ssh -NL 6443:127.0.01:6443 server01.example.com`
 
 ## Debugging
