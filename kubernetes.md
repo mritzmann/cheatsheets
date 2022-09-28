@@ -2,24 +2,33 @@
 
 ## Overview
 
-```
-+-------------------------+
-|   Deployment            |
-|                         |
-|   +-----------------+   |
-|   |  Pod            |   |
-|   |                 |   |
-|   |  +-----------+  |   |
-|   |  | Container |  |   |
-|   |  +-----------+  |   |          +----------------+          +----------------+
-|   |                 |   |          |                |          |                |
-|   |  +-----------+  |   |          |  Service       |          |  Ingress       |
-|   |  | Container |  |   |          |                |          |                |
-|   |  +-----------+  |   |<---------+  +----------+  |<---------+                |
-|   |                 |   |          |  | 80 (TCP) |  |          |                |
-|   +-----------------+   |          |  +----------+  |          |                |
-|                         |          |                |          |                |
-+-------------------------+          +----------------+          +----------------+
+```mermaid
+graph LR
+
+  %% resources
+  internet
+  
+  %% relations
+  internet --- ingress
+
+  subgraph cluster["k8s cluster"]
+
+    %% resources
+    ingress
+    service
+    deployment
+    pod1
+    pod2
+    pod3
+
+    %% relations
+    ingress --- service
+    service --- deployment
+    deployment --- pod1
+    deployment --- pod2
+    deployment --- pod3
+
+  end
 ```
 
 ## Cluster Access
