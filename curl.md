@@ -29,3 +29,9 @@ curl -H "Host: _" http://localhost/
 curl --user-agent "Monit/5.27.1" http://127.0.0.1:8022/
 curl -H "Monit/5.27.1" http://127.0.0.1:8022/
 ```
+
+## Basic Auth
+
+```shell
+curl -u admin:admin https://example.com/
+```
