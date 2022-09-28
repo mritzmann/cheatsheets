@@ -47,56 +47,60 @@ kubectl run toolbox --namespace apps --rm -i --tty --image debian -- bash
 
 ### Namespace
 
-* Permission separation
-* Groups all objects which belong to one project together
+* Mechanism for isolating groups of resources
 
 ```shell
-# create
+# create namespace
 kubectl create namespace myapp
 
-# list
+# list all namespaces
 kubectl get namespace
 
-# delete
+# delete a namespace
 kubectl delete namespace myapp
 
 # set default namespace
-kubectl config set-context --current --namespace=apps
+kubectl config set-context --current --namespace=myapp
+
+# get pods in namespace
+kubectl --namespace myapp get pods
 ```
 
-### Pod
+### Pods
 
-* Metalayer around one or more containers
+* Pods are the smallest deployable units of computing that you can create and manage in Kubernetes
+* A Pod is a group of one or more containers, with shared storage and network resources
 
 ```shell
-# create
-kubectl run awesome-app --image=nginx:latest --namespace myapp
+# run pod
+kubectl run awesome-app --image=nginx:latest
 
-# list
-kubectl get pods --namespace myapp
+# list pods
+kubectl get pods
 
-# delete
-kubectl delete pod awesome-app --namespace myapp
+# delete pod
+kubectl delete pod awesome-app
 ```
 
 ### Deployment
 
-* Should be used instead of pods
+* A deployment provides declarative updates for Pods
 * Covers update process, health and more
 
 ```shell
-# create
-kubectl apply -f deployment.yaml --namespace myapp
+# create deployment
+kubectl apply -f deployment.yaml
 
-# list
-kubectl get deployments --namespace myapp
+# list deployments
+kubectl get deployments
 
-# delete
-kubectl delete deployment example-web --namespace myapp
+# delete deployment
+kubectl delete deployment example-web
 ```
 
-`deployment.yaml`: 
-
+<details>
+  <summary>deployment.yaml</summary>
+  
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -125,31 +129,45 @@ spec:
             cpu: 20m
             memory: 32Mi
 ```
+  
+</details>
+
 
 ### Secrets
 
-```
-kubectl create secret generic <name> --from-file=<name1>=/tmp/test1 --from-file=<name2>=/tmp/regcred
-```
-
-Get secrets
+* Object that contains a small amount of sensitive data such as a password, a token, or a key
 
 ```shell
+# create secret
+kubectl create secret generic <name> --from-file=<name1>=/tmp/test1 --from-file=<name2>=/tmp/regcred
+
+# list secrets
+kubectl get secrets
+
+# get secret
 kubectl get secret regcred --output=yaml
 ```
 
-### Private Registry
-
+<details>
+  <summary>Private Registry</summary>
+  
 Example `--from-file`-file:
 
 ```json
 {"auths":{"registry.example.com":{"username":"<token-username>","password":"<token>","email":"<token-username>@example.com"}}}
 ```
+  
+</details>
 
 ### Service
 
 * An ressource to expose an application running on a set of Pods as a network service
 
+```shell
+# get services
+kubectl get services
+```
+  
 ## Node
 
 ```shell
