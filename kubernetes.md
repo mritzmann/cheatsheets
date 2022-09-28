@@ -19,18 +19,26 @@ graph LR
       ingress
       cert-manager
       service
-      deployment
-      pod1
-      pod2
-      pod3
+      secret
 
       %% relations
       ingress --- service
       ingress -.- cert-manager
-      service --- deployment
-      deployment --- pod1
-      deployment --- pod2
-      deployment --- pod3
+      service --- pod1
+      service --- pod2
+      service --- pod3
+      pod1 -.- secret
+      pod2 -.- secret
+      pod3 -.- secret
+      
+      subgraph deployment
+      
+        %% resources
+        pod1
+        pod2
+        pod3
+      
+      end
     
     end
 
