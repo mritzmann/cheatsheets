@@ -56,7 +56,13 @@ graph LR
 
 ```shell
 # jump into existing container
-kubectl exec --stdin --tty nginx-796495895c-qkj89 -- /bin/bash
+kubectl exec --stdin --tty <pod-name> -- /bin/bash
+```
+
+### Port Forward
+
+```shell
+kubectl port-forward --namespace kube-system <pod.name> 9000:9000
 ```
 
 ### Run
