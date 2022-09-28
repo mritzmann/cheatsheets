@@ -13,20 +13,26 @@ graph LR
 
   subgraph cluster["k8s cluster"]
 
-    %% resources
-    ingress
-    service
-    deployment
-    pod1
-    pod2
-    pod3
+    subgraph namespace
 
-    %% relations
-    ingress --- service
-    service --- deployment
-    deployment --- pod1
-    deployment --- pod2
-    deployment --- pod3
+      %% resources
+      ingress
+      cert-manager
+      service
+      deployment
+      pod1
+      pod2
+      pod3
+
+      %% relations
+      ingress --- service
+      ingress -.- cert-manager
+      service --- deployment
+      deployment --- pod1
+      deployment --- pod2
+      deployment --- pod3
+    
+    end
 
   end
 ```
