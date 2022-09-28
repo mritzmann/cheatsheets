@@ -198,10 +198,12 @@ Example `--from-file`-file:
 kubectl get services
 ```
   
-## Node
+### Node
 
+* Kubernetes Nodes
+  
 ```shell
-# list
+# list all nodes
 kubectl get node -o wide
 ```
 
