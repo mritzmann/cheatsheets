@@ -3,7 +3,7 @@
 ## Create a new branch from unstaged changes
 
 ```shell
-git switch --create 75-yaml-toplevel
+git switch --create feature-branch
 ```
 
 ## Squash multiple commits into one
