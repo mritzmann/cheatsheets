@@ -1,5 +1,11 @@
 # Git - Version Control System
 
+## Create a new branch from unstaged changes
+
+```shell
+git switch --create 75-yaml-toplevel
+```
+
 ## Squash multiple commits into one
 
 Useful before merging a pull request to keep the history clean and readable.
