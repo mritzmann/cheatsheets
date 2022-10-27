@@ -1,5 +1,36 @@
 # Bash
 
+## Best Practice for Scripts
+
+* Use `[[` instead of `[` for if / while statements
+  * Because `[[` is a bash built-in, `[` is not
+  * More powerfull than `[` or `test`
+* Quote variable accesses with double-quotes
+* Redirect error messages to stderr. Example:
+```shell
+echo 'error message' >&2
+```
+
+Template / usefule defaults for bash scripts:
+
+```bash
+#!/usr/bin/env bash
+
+# exit when a command fails
+set -o errexit
+
+# exit when accessing an unset variable (use ${VARNAME-} instead of $VARNAME to ignore this)
+set -o nounset
+
+# ensure that a pipeline command is treated as failed, even if one command in the pipeline fails
+set -o pipefail
+
+# debugg script with 'TRACE=1 ./script.sh' instead of './script.sh'.
+if [[ "${TRACE-0}" == "1" ]]; then set -o xtrace; fi
+```
+
+See also: https://sharats.me/posts/shell-script-best-practices/
+
 ## Test Operators
 
 ```
