@@ -1,11 +1,14 @@
 # Tar
 
+## Uncompress
+
+```shell
+tar -xvf archive.tar.gz
+```
+
 ## Create
 
 ```shell
-# uncompress
-tar -cvf ~/archive.tar ~/
-
 # compress
 tar -czvf ~/archive.tar.gz ~/
 ```
