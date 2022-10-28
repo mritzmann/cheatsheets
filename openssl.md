@@ -37,6 +37,9 @@ openssl x509 -in cert.crt -inform DER -text
 
 # read cert in pkcs12 format
 openssl pkcs12 -in cert.crt -info
+
+# read CSR:
+openssl req -text -noout -verify -in csr.txt
 ```
 
 ## Self Signed Certificate
