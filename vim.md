@@ -11,3 +11,5 @@ Insert text at beginning of a multi-line selection:
 Delete word: <kbd>diw</kbd>
 
 Delete around word:  <kbd>daw</kbd>
+
+Disable visual mode to copy text: `set mouse-=a`
