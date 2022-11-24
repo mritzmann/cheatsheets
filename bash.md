@@ -31,6 +31,16 @@ if [[ "${TRACE-0}" == "1" ]]; then set -o xtrace; fi
 
 See also: https://sharats.me/posts/shell-script-best-practices/
 
+## Default for Variable
+
+```shell
+${VAR1:-"Hello World"}
+```
+
+```shell
+VAR1=${VAR1:="Hello World"}
+```
+
 ## Test Operators
 
 ```
