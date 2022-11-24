@@ -48,10 +48,10 @@ Substring:
 VAR1=user:diretory
 
 # remove substring beforce ":"
-VAR2=${VAR#*:}
+VAR2=${VAR1#*:}
 
 # remove substring after ":"
-VAR2=${VAR%:*}
+VAR2=${VAR1%:*}
 ```
 
 ## Test Operators
