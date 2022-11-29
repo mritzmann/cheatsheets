@@ -41,3 +41,20 @@ cd @hashed/c8/37/<uid>.git
 git gc
 chown git: . -R
 ```
+
+## GitLab CI
+
+* Build and push a image with [Kaniko](https://github.com/GoogleContainerTools/kaniko)
+* Kaniko is a tool to build container images from a `Dockerfile`, inside a container or Kubernetes cluster
+
+```yml
+build:
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - /kaniko/executor
+      --context "${CI_PROJECT_DIR}"
+      --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+      --destination "${CI_REGISTRY_IMAGE}:${CI_COMMIT_TAG}"
+```
