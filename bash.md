@@ -85,14 +85,14 @@ More: https://www.gnu.org/software/bash/manual/html_node/Redirections.html
 
 ## Compare
 
-| Expresion             | Purpose                | Return `0` if                           |
-| :-------------------- | :--------------------- | :-------------------------------------- |
-| `[ $var1 –eq $var2 ]` | `(eq = equal)`         | `$var1` equal `$var2`                   |
-| `[ $var1 –ne $var2 ]` | `(ne = not equal)`     | `$var1` unequal `$var2`                 |
-| `[ $var1 –lt $var2 ]` | `(lt = less than)`     | `$var1` smaller then `$var2`            |
-| `[ $var1 –gt $var2 ]` | `(gt = greater than)`  | `$var1` greater `$var2`                 |
-| `[ $var1 –le $var2 ]` | `(le = less equal)`    | `$var1` smaller or equal `$var2`        |
-| `[ $var1 –ge $var2 ]` | `(ge = greater equal)` | `$var1` greater or smaller `$var2`      |
+| Expresion             | Purpose            | Return `0` if                                |
+| :-------------------- | :----------------- | :------------------------------------------- |
+| `[ $var1 –eq $var2 ]` | equal              | `$var1` is equal to `$var2`                  |
+| `[ $var1 –ne $var2 ]` | not equal          | `$var1` is not equal to `$var2`              |
+| `[ $var1 –lt $var2 ]` | less than          | `$var1` is less then `$var2`                 |
+| `[ $var1 –gt $var2 ]` | greater than       | `$var1` is greater then `$var2`              |
+| `[ $var1 –le $var2 ]` | less equal         | `$var1` is less or equal then `$var2`        |
+| `[ $var1 –ge $var2 ]` | greater equal      | `$var1` is greater or equal then `$var2`   |
 
 ## If and Else
 
