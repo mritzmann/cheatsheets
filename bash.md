@@ -74,7 +74,7 @@ More: https://tldp.org/LDP/abs/html/fto.html
 ## Redirections
 
 | File Descriptor | Purpose              | Example                                          |
-| --------------- | -------------------- | ------------------------------------------------ |
+| :-------------- | :------------------- | :----------------------------------------------- |
 | `0`             | Standard input       |                                                  |
 | `1`             | Standard output      | `command 1> output.txt` / `command > output.txt` |
 | `2`             | Standard error       | `command 2> output.txt`                          |
@@ -82,6 +82,17 @@ More: https://tldp.org/LDP/abs/html/fto.html
 | `1` & terminal  | to file and terminal | `command 2>&1 \| tee out.log`                    |
 
 More: https://www.gnu.org/software/bash/manual/html_node/Redirections.html
+
+## Compare
+
+| Expresion             | Purpose                | Return `0` if                           |
+| :-------------------- | :--------------------- | :-------------------------------------- |
+| `[ $var1 –eq $var2 ]` | `(eq = equal)`         | `$var1` equal `$var2`                   |
+| `[ $var1 –ne $var2 ]` | `(ne = not equal)`     | `$var1` unequal `$var2`                 |
+| `[ $var1 –lt $var2 ]` | `(lt = less than)`     | `$var1` smaller then `$var2`            |
+| `[ $var1 –gt $var2 ]` | `(gt = greater than)`  | `$var1` greater `$var2`                 |
+| `[ $var1 –le $var2 ]` | `(le = less equal)`    | `$var1` smaller or equal `$var2`        |
+| `[ $var1 –ge $var2 ]` | `(ge = greater equal)` | `$var1` greater or smaller `$var2`      |
 
 ## If and Else
 
