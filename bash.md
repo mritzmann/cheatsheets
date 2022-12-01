@@ -79,7 +79,7 @@ More: https://tldp.org/LDP/abs/html/fto.html
 | `1`             | Standard output      | `command 1> output.txt` / `command > output.txt` |
 | `2`             | Standard error       | `command 2> output.txt`                          |
 | `1` & `2`       | Redirect both        | `command &> output.txt`                          |
-| `1` & terminal  | to file and terminal | `command 2>&1 | tee out.log`                     |
+| `1` & terminal  | to file and terminal | `command 2>&1 \| tee out.log`                    |
 
 More: https://www.gnu.org/software/bash/manual/html_node/Redirections.html
 
