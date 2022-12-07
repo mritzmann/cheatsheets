@@ -13,3 +13,15 @@ https://robotmoon.com/ssh-tunnels/
 1. Enter
 2. `~C`
 3. `-L 19999:127.0.0.1:19999`
+
+## OpenSSH-Server
+
+Quick and dirty:
+
+```shell
+apt-get install -y openssh-server
+echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+echo "PasswordAuthentication no" >> /etc/ssh/sshd_config
+mkdir -p /root/.ssh && curl "https://github.com/<gitlab-user>.keys" >> /root/.ssh/authorized_keys
+service ssh restart
+```
