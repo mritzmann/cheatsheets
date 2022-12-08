@@ -131,6 +131,11 @@ done
 
 ## For
 
+Contains all arguments
+
+* `$*`: As single string
+* `$@`: As array
+
 ```bash
 for variable in string1 string2 string3
 do
