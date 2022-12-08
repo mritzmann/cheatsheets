@@ -117,3 +117,23 @@ elif test-command; then
   command
 fi
 ```
+
+## While
+
+```bash
+count=3
+while [ $count -gt 0 ]
+do
+  echo $count
+  let count=$count-1
+done
+```
+
+## For
+
+```bash
+for variable in string1 string2 string3
+do
+  echo $variable
+done
+```
