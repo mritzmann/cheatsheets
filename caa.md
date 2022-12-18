@@ -23,6 +23,6 @@ example.com. IN CAA 0 issue "letsencrypt.org; validationmethods=tls-alpn-01"
 
 Only allow specific account:
 
-```
+```shell
 example.com. IN CAA 0 issue "letsencrypt.org; accounturi=https://acme-v02.api.letsencrypt.org/acme/acct/159998200"
 ```
