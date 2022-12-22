@@ -142,3 +142,13 @@ do
   echo $variable
 done
 ```
+
+## Case
+
+```bash
+case $variable in
+  a|-a|--all)  echo all files ;;
+  n|-n|--new)  echo new file ;;
+  * )          echo not available
+esac
+```
