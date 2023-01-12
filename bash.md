@@ -152,3 +152,55 @@ case $variable in
   * )          echo not available
 esac
 ```
+
+## Arrays
+
+Variable that contains multiple values.
+
+### Create Array
+
+```bash
+arr1=(A B C)
+      ▲ ▲ ▲
+      │ │ │
+      │ │ Index 2
+      │ Index 1
+      Index 0
+```
+
+or:
+
+```bash
+declare -a aar2
+arr2[0]=A
+arr2[1]=B
+arr2[2]=C
+```
+
+### Extend Array
+
+```bash
+arr1+=(D E F)
+```
+
+### Access Array
+
+```bash
+# echo value in index 0
+echo ${arr1[0]}
+
+# echo all values
+echo ${arr1[@]}
+```
+
+### Special Functions
+
+```bash
+# count all values
+echo ${#arr1[@]}
+```
+
+```bash
+# length of the fourth value
+echo ${#arr1[4]}
+```
