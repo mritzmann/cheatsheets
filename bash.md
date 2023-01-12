@@ -187,10 +187,10 @@ arr1+=(D E F)
 
 ```bash
 # echo value in index 0
-echo ${arr1[0]}
+echo ${Lebensmittel[0]}
 
 # echo all values
-echo ${arr1[@]}
+echo ${Lebensmittel[@]}
 ```
 
 ### Special Functions
