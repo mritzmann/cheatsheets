@@ -204,3 +204,15 @@ echo ${#arr1[@]}
 # length of the fourth value
 echo ${#arr1[4]}
 ```
+
+### Associative Array
+
+* Key=Value instead of Index=Value
+* Declare with `-A`, instead of `-a`
+* Works with Bash 4 or newer
+
+```bash
+declare -A aar3
+aar3[key]=value
+echo ${arr1[key]}
+```
