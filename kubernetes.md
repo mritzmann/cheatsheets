@@ -11,9 +11,9 @@ node1 --- pod1_3
 node2 --- pod2_1
 node3 --- pod3_1
 
-control --- node1
-control --- node2
-control --- node3
+control -.- node1
+control -.- node2
+control -.- node3
 
 subgraph server0[server]
   control["Control Plane"]
