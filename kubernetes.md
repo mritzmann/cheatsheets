@@ -15,25 +15,37 @@ control -.- node1
 control -.- node2
 control -.- node3
 
-subgraph server0[server]
-  control["Control Plane"]
-end
+subgraph cluster["Kubernetes Cluster"]
 
-subgraph server1[server]
-  node1[node]
-  pod1_1[pod]
-  pod1_2[pod]
-  pod1_3[pod]
-end
+  subgraph controlplane["Control Plane"]
 
-subgraph server2[server]
-  node2[node]
-  pod2_1[pod]
-end
+    subgraph server0[server]
+      control["Control Plane"]
+    end
 
-subgraph server3[server]
-  node3[node]
-  pod3_1[pod]
+  end
+
+  subgraph worker["Worker Nodes"]
+
+    subgraph server1[server]
+      node1[node]
+      pod1_1[pod]
+      pod1_2[pod]
+      pod1_3[pod]
+    end
+
+    subgraph server2[server]
+      node2[node]
+      pod2_1[pod]
+    end
+
+    subgraph server3[server]
+      node3[node]
+      pod3_1[pod]
+    end
+
+  end
+
 end
 ```
 
@@ -51,7 +63,7 @@ graph LR
   %% relations
   internet --- ingress
 
-  subgraph cluster["k8s cluster"]
+  subgraph cluster["Kubernetes Cluster"]
 
     subgraph namespace
 
