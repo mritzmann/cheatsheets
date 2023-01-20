@@ -27,22 +27,27 @@ end
 
 subgraph server1["Server (Worker Node)"]
   kublet1[Kublet]
+  kublet1 --- containerd1
+
+  containerd1[containerd]
+  containerd1 --- pod1_1
+  containerd1 --- pod1_2
 
   pod1_1[pod]
   pod1_2[pod]
-  
-  kublet1 --- pod1_1
-  kublet1 --- pod1_2
+ 
 end
 
 subgraph server2["Server (Worker Node)"]
   kublet2[Kublet]
+  kublet2 --- containerd2
+
+  containerd2[containerd]
+  containerd2 --- pod2_1
+  containerd2 --- pod2_2
 
   pod2_1[pod]
   pod2_2[pod]
-  
-  kublet2 --- pod2_1
-  kublet2 --- pod2_2
 end
 ```
 
