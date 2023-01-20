@@ -133,6 +133,10 @@ kubectl run toolbox --namespace apps --rm -i --tty --image debian -- bash
 ### Namespace
 
 * Mechanism for isolating groups of resources
+* Default namespcaes, cannot be deleted:
+  * `kube-sytem`: For Kubernetes components
+  * `kube-public:` For public resources
+  * `default`: FOr user resources
 
 ```shell
 # create namespace
