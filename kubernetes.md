@@ -5,6 +5,46 @@
 ```mermaid
 graph LR
 
+node1 --- pod1_1
+node1 --- pod1_2
+node1 --- pod1_3
+node2 --- pod2_1
+node3 --- pod3_1
+
+control --- node1
+control --- node2
+control --- node3
+
+subgraph server0[server]
+  control["Control Plane"]
+end
+
+subgraph server1[server]
+  node1[node]
+  pod1_1[pod]
+  pod1_2[pod]
+  pod1_3[pod]
+end
+
+subgraph server2[server]
+  node2[node]
+  pod2_1[pod]
+end
+
+subgraph server3[server]
+  node3[node]
+  pod3_1[pod]
+end
+```
+
+* High-level view of Kubernetes cluster components
+* In this example, the control level runs on its own server
+
+---
+
+```mermaid
+graph LR
+
   %% resources
   internet
   
@@ -44,6 +84,9 @@ graph LR
 
   end
 ```
+
+* High-level view of Kubernetes Resources
+* From the perspective of a single project
 
 ## Cluster Access
 
