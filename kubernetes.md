@@ -2,8 +2,6 @@
 
 ## Overview
 
-High-level view of Kubernetes cluster components:
-
 ```mermaid
 graph LR
 
@@ -47,6 +45,8 @@ subgraph server2["Server (Worker Node)"]
   kublet2 --- pod2_2
 end
 ```
+
+High-level view of Kubernetes cluster components.
 
 * **API Server:** Interface for users and other K8s services
 * **Etcd:** Persistent storage for ressource configuration
@@ -98,8 +98,7 @@ graph LR
   end
 ```
 
-* High-level view of Kubernetes Resources
-* From the perspective of a single project
+High-level view of Kubernetes Resources.
 
 ## Cluster Access
 
