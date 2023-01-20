@@ -2,55 +2,56 @@
 
 ## Overview
 
+High-level view of Kubernetes cluster components:
+
 ```mermaid
 graph LR
 
-node1 --- pod1_1
-node1 --- pod1_2
-node1 --- pod1_3
-node2 --- pod2_1
-node3 --- pod3_1
+api --- scheduler
+api --- control
+api --- etcd
 
-control -.- node1
-control -.- node2
-control -.- node3
+api -.- kublet1
+api -.- kublet2
 
-subgraph cluster["Kubernetes Cluster"]
+%% k8s admin
+user["User (You)"]
+user --- kubectl
+kubectl -.- api
 
-  subgraph controlplane["Control Plane"]
+subgraph server0["Server (Control Plane)"]
 
-    subgraph server0[server]
-      control["Control Plane"]
-    end
+  api["API Server"]
+  etcd[Etcd]
+  scheduler["Scheduler"]
+  control["Controller Manager"]
+end
 
-  end
+subgraph server1["Server (Worker Node)"]
+  kublet1[Kublet]
 
-  subgraph worker["Worker Nodes"]
+  pod1_1[pod]
+  pod1_2[pod]
+  
+  kublet1 --- pod1_1
+  kublet1 --- pod1_2
+end
 
-    subgraph server1[server]
-      node1[node]
-      pod1_1[pod]
-      pod1_2[pod]
-      pod1_3[pod]
-    end
+subgraph server2["Server (Worker Node)"]
+  kublet2[Kublet]
 
-    subgraph server2[server]
-      node2[node]
-      pod2_1[pod]
-    end
-
-    subgraph server3[server]
-      node3[node]
-      pod3_1[pod]
-    end
-
-  end
-
+  pod2_1[pod]
+  pod2_2[pod]
+  
+  kublet2 --- pod2_1
+  kublet2 --- pod2_2
 end
 ```
 
-* High-level view of Kubernetes cluster components
-* In this example, the control level runs on its own server
+* **API Server:** Interface for users and other K8s services
+* **Etcd:** Persistent storage for ressource configuration
+* **Scheduler:** Tracks worker nodes and decides where to run pods
+* **Kublet:** Runs on every worker node to manage pods
 
 ---
 
