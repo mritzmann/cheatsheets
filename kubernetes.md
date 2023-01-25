@@ -120,6 +120,12 @@ High-level view of Kubernetes Resources.
 kubectl exec --stdin --tty <pod-name> -- /bin/bash
 ```
 
+### Describe
+
+```shell
+kubectl describe pod <name>
+```
+
 ### Port Forward
 
 ```shell
