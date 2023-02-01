@@ -19,13 +19,13 @@ Template / usefule defaults for bash scripts:
 # exit when a command fails
 set -o errexit
 
-# exit when accessing an unset variable (use ${VARNAME-} instead of $VARNAME to ignore this)
+# exit when accessing an unset variable
 set -o nounset
 
-# ensure that a pipeline command is treated as failed, even if one command in the pipeline fails
+# exit if one command in a pipeline fails
 set -o pipefail
 
-# debugg script with 'TRACE=1 ./script.sh' instead of './script.sh'.
+# debugg script with 'TRACE=1 ./script.sh'
 if [[ "${TRACE-0}" == "1" ]]; then set -o xtrace; fi
 ```
 
