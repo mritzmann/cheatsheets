@@ -71,3 +71,7 @@ I/O monitor:
 ```shell
 iotop
 ```
+
+```shell
+pidstat -dl 20
+```
