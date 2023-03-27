@@ -17,4 +17,7 @@
 ```shell
 # init
 terraform init
+
+# remove from state
+terraform state rm <ressource> 
 ```
