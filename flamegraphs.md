@@ -21,7 +21,7 @@ apt-get install --yes systemtap-sdt-dev
 
 See examples on https://www.brendangregg.com/FlameGraphs/cpuflamegraphs.html
 
-* The width of a box indicates the total time it was on the CPU. A wide box means that it uses more CPU per execution or is called more often.
+* The width of a box indicates the time it was on the CPU. A wide box means that it uses more CPU per execution or is called more often.
 * The top box shows the function that was on-CPU. The function under a function is its parent.
 
 ## Examples
