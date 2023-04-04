@@ -64,18 +64,6 @@ show processlist;
 SHOW FULL PROCESSLIST;
 ```
 
-## Compare Tables from different Databases
-
-Compare 'id' from table 'table' from db 'db1' with 'id' from table 'table' from db 'db2':
-
-```sql
-SELECT id
-FROM db1.table
-WHERE id NOT IN
-    (SELECT id
-     FROM db2.table);
-```
-
 ## Binary Logs
 
 Delete all binary logs.
