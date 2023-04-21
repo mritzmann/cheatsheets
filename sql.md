@@ -1,5 +1,36 @@
 # SQL
 
+## Data Types
+
+* `INT`: Integer values (example: `42`)
+* `FLOAT` and `DOUBLE`: Decimal or floating point values (example: `42.2`)
+* `VARCHAR`: Variable-length character strings
+* `DATE`, `DATETIME`, `TIMESTAMP`: Date and time values
+
+## Create a Table / Writing a Schema
+
+Example Schema for a new Table:
+
+```sql
+CREATE TABLE `users` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  `birthday` date,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+;)
+```
+
+Principles:
+
+1. Choose the smallest data type (example: don't use `varchar(500)` for city names, use `varchar(100)` or smaller) 
+2. Choose the simplest data type (for example use a date type for dates and don't save dates in `varchar`)
+
+Storage space is cheap, that's not the point.
+Smaller file types allows to create SQL indexes more efficiently and retrieve data faster.
+
 ## Database
 
 List all databases:
