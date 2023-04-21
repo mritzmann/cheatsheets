@@ -1,13 +1,19 @@
 # SQL
 
-## Data Types
+Structured Query Language.
+
+## Writing a Schema
+
+How to create tables.
+
+### Data Types
 
 * `INT`: Integer values (example: `42`)
 * `FLOAT` and `DOUBLE`: Decimal or floating point values (example: `42.2`)
 * `VARCHAR`: Variable-length character strings
 * `DATE`, `DATETIME`, `TIMESTAMP`: Date and time values
 
-## Create a Table / Writing a Schema
+### Create a Table
 
 Example Schema for a new Table:
 
