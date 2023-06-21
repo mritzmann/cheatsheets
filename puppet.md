@@ -1,5 +1,11 @@
 # Puppet
 
+## Notify
+
+```shell
+notify {"${name}: test message":}
+```
+
 ## Dry-Run
 
 ```shell
