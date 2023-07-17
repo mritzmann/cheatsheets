@@ -1,4 +1,6 @@
-# Qemu
+# QEMU (Quick Emulator)
+
+Free and open-source emulator.
 
 # `qemu-system`
 
