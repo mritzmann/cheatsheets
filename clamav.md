@@ -5,7 +5,7 @@
 Scan directory:
 
 ```shell
-clamscan --recursive=yes
+clamscan --recursive=yes /path/to/scan
 ```
 
 Optional:
