@@ -1,6 +1,6 @@
 # VyOS
 
-Workfolow:
+## Workflow
 
 ```shell
 configure
