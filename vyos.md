@@ -1,5 +1,13 @@
 # VyOS
 
+## General
+
+Version:
+
+```shell
+show version
+```
+
 ## Workflow
 
 ```shell
