@@ -3,6 +3,9 @@
 ## Create a new branch from unstaged changes
 
 ```shell
+git checkout -b feature-branch
+
+# git v2.23 or newer
 git switch --create feature-branch
 ```
 
