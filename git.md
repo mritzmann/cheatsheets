@@ -9,6 +9,15 @@ git checkout -b feature-branch
 git switch --create feature-branch
 ```
 
+## Restore file from commit
+
+```shell
+git restore --source=50f5bffc787d52a927d7680e3c6b9abed2a75d09 --worktree modules/clamav/manifests/init.pp
+```
+
+* `--source`/`-W`: Commit ID
+* `--worktree`/`-s`: Do not add to Staging-Area
+
 ## Squash multiple commits into one
 
 Useful before merging a pull request to keep the history clean and readable.
