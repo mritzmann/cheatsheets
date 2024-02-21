@@ -21,3 +21,12 @@ Proxy:
 ProxyPass / http://127.0.0.1:8080/
 ProxyPassReverse / http://127.0.0.1:8080/
 ```
+
+Location:
+
+```
+<location /test>
+  ProxyPass http://127.0.0.1:8080/
+  ProxyPassReverse http://127.0.0.1:8080/
+</location>
+```
