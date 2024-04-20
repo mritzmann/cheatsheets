@@ -15,3 +15,9 @@ https://support.microsoft.com/en-us/windows/ways-to-install-windows-11-e0edbbfb-
 1. `gpedit.msc`
 2. Computerkonfiguration -> Windows-Einstellungen -> Sicherheitseinstellungen -> Lokale Richtlinien -> Sicherheitsoptionen
 3. Set `Konten: Microsoft-Konten blockieren` to `Benutzer können keine Microsoft-Konten hinzufügen oder sich damit anmelden`
+
+## Block OneDrive
+
+1. `gpedit.msc`
+2. Computerkonfiguration -> Administrative Vorlagen -> Windows-Komponenten -> OneDrive
+3. Set `Verwendung von OneDrive für die Datenspeicherung verhindern` to `Aktiviert`
