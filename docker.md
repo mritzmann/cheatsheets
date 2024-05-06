@@ -1,5 +1,13 @@
 # Docker
 
+## Resource Usage
+
+Display resource usage statistics:
+
+```shell
+docker stats --no-stream
+```
+
 ## Platform
 
 Choose another CPU architecture:
