@@ -39,3 +39,11 @@ If you want to delete a directory with several million files, `rm -rf folder` is
 mkdir empty
 rsync -a --delete empty/ folder/
 ```
+
+## Sudo
+
+If `user@srv01.example.com` only can read the data with `sudo`:
+
+```shell
+rsync -avz --rsync-path="sudo rsync" user@srv01.example.com:/source/path /target/path
+```
