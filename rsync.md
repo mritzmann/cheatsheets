@@ -12,6 +12,7 @@ rsync -avz --delete <user>@<server>:/home/user/ /home/user/
 * `--delete`: delete extraneous files from dest dirs
 * `--exclude=PATTERN`: exclude files matching PATTERN
 * `--info=progress2`: statistics
+* `--dry-run` / `-n`: trial run
 
 ## Jump Host
 
