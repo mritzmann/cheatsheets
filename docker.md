@@ -46,3 +46,17 @@ DOCKER_BUILDKIT=1 docker build --tag image:name .
 > By integrating BuildKit, users should see an improvement on performance, storage management, feature functionality, and security.
 
 https://docs.docker.com/develop/develop-images/build_enhancements/
+
+## Prune
+
+Remove all Volumes:
+
+```shell
+docker volume rm $(docker volume ls -q --filter dangling=true)
+```
+
+Remove all Images:
+
+```shell
+docker system prune
+```
