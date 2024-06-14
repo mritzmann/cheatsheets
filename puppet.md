@@ -12,6 +12,17 @@ notify {"${name}: test message":}
 puppet agent --test --noop
 ```
 
+## Local Testing
+
+`puppet.pp`:
+
+```pp
+$message = "Hello World!"
+notify {"$message":}
+```
+
+Run with: `puppet apply puppet.pp`
+
 ## Validate Variables
 
 ```puppet
