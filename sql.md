@@ -29,6 +29,15 @@ CREATE TABLE `users` (
 ;)
 ```
 
+```sql
+CREATE TABLE student (
+  student_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  name       VARCHAR(255) NOT NULL,
+  vorname    VARCHAR(255) NOT NULL,
+  email      CHAR(100)
+);
+```
+
 Principles:
 
 1. Choose the smallest data type (example: don't use `varchar(500)` for city names, use `varchar(100)` or smaller) 
@@ -39,22 +48,15 @@ Smaller file types allows to create SQL indexes more efficiently and retrieve da
 
 ## Database
 
-List databases:
-
 ```sql
-SHOW DATABASES;
-```
+# list
+show databases;
 
-Create database:
+# create
+create databaase test;
 
-```sql
-CREATE DATABASE test;
-```
-
-Use database:
-
-```sql
-USE db_name;
+# use
+use test;
 ```
 
 ## Table
