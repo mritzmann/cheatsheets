@@ -39,10 +39,16 @@ Smaller file types allows to create SQL indexes more efficiently and retrieve da
 
 ## Database
 
-List all databases:
+List databases:
 
 ```sql
 SHOW DATABASES;
+```
+
+Create database:
+
+```sql
+CREATE DATABASE test;
 ```
 
 Use database:
