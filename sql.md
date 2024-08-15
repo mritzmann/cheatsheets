@@ -46,6 +46,12 @@ Principles:
 Storage space is cheap, that's not the point.
 Smaller file types allows to create SQL indexes more efficiently and retrieve data faster.
 
+Show table definition:
+
+```sql
+describe student;
+```
+
 ## Database
 
 ```sql
@@ -61,10 +67,20 @@ use test;
 
 ## Table
 
-List all tables:
+```sql
+# list
+show tables;
+```
+
+## Insert
 
 ```sql
-SHOW TABLES;
+INSERT INTO student (name, vorname, email)
+VALUES
+  ('Schmid','Norina','n.schmid@schule.ch'),
+  ('Mäder','Klaus','k.maeder@schule.ch'),
+  ('Kunz','Paula','p.kunz@schule.ch')
+;
 ```
 
 ## Columns
