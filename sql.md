@@ -105,6 +105,14 @@ Search for `no wanted headers` in column `returned_text` in table `imapsync` and
 SELECT user1 FROM imapsync WHERE returned_text LIKE '%no wanted headers%';
 ```
 
+Join:
+
+```sql
+select name, email
+from student join klasse on student.klasse = klasse.klasse_id
+where klasse.bezeichnung = 'HFSNT.SG.2';
+```
+
 ## Update
 
 Set `auto_archive` to `1`, where `auto_archive` is set to `0`:
