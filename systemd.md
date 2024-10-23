@@ -1,5 +1,15 @@
 # Systemd
 
+## Edit
+
+Path for configuration files: `/etc/systemd/system`
+
+Reload configuration:
+
+```
+systemctl daemon-reload
+```
+
 ## Debugging
 
 Reihenfolge Startup:
