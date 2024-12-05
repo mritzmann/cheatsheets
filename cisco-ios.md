@@ -21,13 +21,7 @@ Write to disk:
 write
 ```
 
-## Configurations
-
-Set hostname:
-
-```
-hostname router01
-```
+## New Router
 
 Disable ip lookup:
 
@@ -35,8 +29,22 @@ Disable ip lookup:
 no ip domain lookup
 ```
 
+Set hostname:
+
+```
+hostname router01
+```
+
 Set password:
 
 ```
 enable secret <password>
+```
+
+## Show
+
+Network configuration:
+
+```
+show ip interface brief
 ```
