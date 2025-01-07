@@ -59,7 +59,7 @@ describe student;
 show databases;
 
 # create
-create databaase test;
+create database test;
 
 # use
 use test;
