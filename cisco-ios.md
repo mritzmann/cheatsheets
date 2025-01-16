@@ -27,6 +27,12 @@ Show configuration:
 show run
 ```
 
+Show access lists:
+
+```shell
+show access-lists
+```
+
 ## New Router
 
 Disable ip lookup:
