@@ -21,6 +21,12 @@ Write to disk:
 write
 ```
 
+Show configuration:
+
+```
+show run
+```
+
 ## New Router
 
 Disable ip lookup:
