@@ -117,3 +117,9 @@ interface <Schnittstellen-Typ><Schnittstellen-Nummer>.<VLAN-ID>
 encapsulation dot1Q <VLAN-ID> 
 ip address <IP-Adresse> <Subnetzmaske>
 ```
+
+## Further References
+
+* https://github.com/grplyler/cisco-cheatsheet/blob/master/README.md
+* https://github.com/r7perezyera/Cisco-IOS-Command-CheatSheets/blob/master/switch_commands.md
+* https://github.com/r7perezyera/Cisco-IOS-Command-CheatSheets/blob/master/router_commands.md
