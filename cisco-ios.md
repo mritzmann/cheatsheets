@@ -103,6 +103,21 @@ Enable Interface:
 no shutdown
 ```
 
+## Password
+
+Unsafe:
+
+```
+# plaintext
+enable password <password>
+```
+
+Safer:
+
+```
+enable secret <password>
+```
+
 ## Create VLAN
 
 ```
