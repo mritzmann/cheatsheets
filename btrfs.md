@@ -28,6 +28,20 @@ Pull snapshot from another host:
 ssh root@srv01.example.com "btrfs send /path/to/snapshot" | pv | btrfs receive /path/to/snapshot
 ```
 
+## Compression
+
+Set conmpression for new files in directory:
+
+```shell
+btrfs property set /var/log compression lzo
+```
+
+Show configured compression:
+
+```shell
+btrfs property get /var/log compression
+```
+
 ## Quota
 
 Btrfs quota may require a lot of performance (depending on the number of files and snapshots) and should therefore be deactivated.
