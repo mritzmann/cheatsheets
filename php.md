@@ -2,13 +2,13 @@
 
 ## Shell
 
-Run simple php commands:
+Run commands:
 
 ```shell
 php -r 'echo ini_get("memory_limit");'
 ```
 
-Start dev webserver:
+Start build-in server:
 
 ```shell
 php -S localhost:8888
@@ -17,10 +17,10 @@ php -S localhost:8888
 ## Echo
 
 ```php
-echo "Hello World"
+echo "Hello World";
 echo "Hello " . "World";
-echo("Hello World");
 echo "Hello ", "World";
+echo("Hello World");
 ```
 
 ```php
@@ -33,6 +33,7 @@ echo "Hello ", "World";
 ```php
 $greeting = "Hello World";
 echo $greeting;
+echo {$greeting}™;
 ```
 
 ## Conditionals
@@ -45,6 +46,18 @@ if ($boolean) {
 } else {
   $message = "Boolean is false";
 }
+```
 
-print $message;
+## Arrays
+
+```php
+$books = [
+  "The Art of Thinking Clearly",
+  "Atomic Habits",
+  "The Hitchhikers Guide to the Galaxy"
+];
+
+<?php foreach ($books as $book) {
+  echo $book;
+}
 ```
