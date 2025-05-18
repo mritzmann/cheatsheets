@@ -23,9 +23,28 @@ echo("Hello World");
 echo "Hello ", "World";
 ```
 
+```php
+<?php echo "Hello world"; ?>
+<?= "Hello world"; ?>
+```
+
 ## Variables
 
 ```php
 $greeting = "Hello World";
-echo 	$greeting;
+echo $greeting;
+```
+
+## Conditionals
+
+```shell
+$boolean = true;
+
+if ($boolean) {
+  $message = "Boolean is true";
+} else {
+  $message = "Boolean is false";
+}
+
+print $message;
 ```
