@@ -57,7 +57,23 @@ $books = [
   "The Hitchhikers Guide to the Galaxy"
 ];
 
+# echo every item
 <?php foreach ($books as $book) {
   echo $book;
 }
+
+# create html list
+<ul>
+  <?php foreach ($books as $book) {
+    echo "<li>$book</li>";
+  }
+  ?>
+</ul>
+
+# create html list (template friendly)
+<ul>
+  <?php foreach ($books as $book) : ?>
+    <li><?= $book; ?></li>
+  <?php endforeach; ?>
+</ul>
 ```
