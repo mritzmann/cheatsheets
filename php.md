@@ -85,27 +85,27 @@ $books = [
 
 ```php
 <?php
-	$books = [
-		[
-			"name" => "The Art of Thinking Clearly",
-			"author" => "Rolf Dobelli",
-			"wiki" => "https://en.wikipedia.org/wiki/The_Art_of_Thinking_Clearly"
-		],
-		[
-			"name" => "The Hitchhikers Guide to the Galaxy",
-			"author" => "Douglas Adams",
-			"wiki" => "https://en.wikipedia.org/wiki/Douglas_Adams"
-		]
-	];
+  $books = [
+    [
+      "name" => "The Art of Thinking Clearly",
+      "author" => "Rolf Dobelli",
+      "wiki" => "https://en.wikipedia.org/wiki/The_Art_of_Thinking_Clearly"
+    ],
+    [
+      "name" => "The Hitchhikers Guide to the Galaxy",
+      "author" => "Douglas Adams",
+      "wiki" => "https://en.wikipedia.org/wiki/Douglas_Adams"
+    ]
+  ];
 ?>
 
 <ul>
-	<?php foreach ($books as $book) : ?>
-		<li>
-			<a href="<?= $book["wiki"]; ?>">
-				<?= $book["name"]; ?>
-			</a>
-		</li>
-	<?php endforeach; ?>
+  <?php foreach ($books as $book) : ?>
+    <li>
+      <a href="<?= $book["wiki"]; ?>">
+        <?= $book["name"]; ?>
+      </a>
+    </li>
+  <?php endforeach; ?>
 </ul>
 ```
