@@ -6,7 +6,7 @@
 | --------------------------- | ----------- |
 | <kbd>Cmd</kbd>+<kbd>L</kbd> | Select Line |
 
-## Projekt Settings
+## Project Settings
 
 `.vscode/settings.json`
 
