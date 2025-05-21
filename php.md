@@ -38,7 +38,7 @@ echo {$greeting}™;
 
 ## Conditionals
 
-```shell
+```php
 $boolean = true;
 
 if ($boolean) {
@@ -46,6 +46,12 @@ if ($boolean) {
 } else {
   $message = "Boolean is false";
 }
+```
+
+```php
+<?php if ($book['author'] === 'Andy Weir'): ?>
+    <li><?= $book['name'] ?></li>
+<?php endif; ?>
 ```
 
 ## Arrays
