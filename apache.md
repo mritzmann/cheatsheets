@@ -31,3 +31,14 @@ Location:
   ProxyPassReverse http://127.0.0.1:8080/
 </location>
 ```
+
+Block IP:
+
+```
+<LocationMatch />
+  <RequireAll>
+    Require all granted
+    Require not ip 137.184.121.76
+  </RequireAll>
+</LocationMatch>
+```
