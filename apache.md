@@ -35,10 +35,10 @@ Location:
 Block IP:
 
 ```
-<LocationMatch />
+<Location />
   <RequireAll>
     Require all granted
     Require not ip 137.184.121.76
   </RequireAll>
-</LocationMatch>
+</Location>
 ```
