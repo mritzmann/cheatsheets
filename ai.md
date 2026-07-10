@@ -60,3 +60,10 @@ ollama launch claude --model qwen3.6:35b-a3b-coding-mxfp8
 | `qwen3.6:35b-a3b-coding-mxfp8` | ~1m 30s | Top - 1 |
 | `qwen3.6:35b` | not possible | -- |
 | `qwen3.6:27b` | not possible | -- |
+
+> Falls ich hinter der Login Maske einen Hintergrund erstellen möchte, wo müsste ich das einbauen? Bitte liste die files auf welche bearbeitet werden müssten. Bearbeite noch nichts.
+
+| Model | Time | Result |
+| ----- | ---- | ------ |
+| Claude Online | ~1m | Top |
+| `qwen3.6:35b-a3b-coding-mxfp8` | Nach ~5min abgebrochen |
