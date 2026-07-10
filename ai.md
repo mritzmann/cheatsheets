@@ -45,6 +45,18 @@ ollama ls
 ollama ps
 
 # start claude code
+ollama launch claude --model qwen3.6:27b
 ollama launch claude --model qwen3.6:35b
 ollama launch claude --model qwen3.6:35b-a3b-coding-mxfp8
 ```
+
+## Benchmark
+
+> Program a game: Tic-Tac-Toe. The game should run in the browser. Create only a single index.html file. Create no other files. 
+
+| Model | Time | Result |
+| ----- | ---- | ------ |
+| Claude Online | ~30s | Top |
+| `qwen3.6:35b-a3b-coding-mxfp8` | ~1m 30s | Top - 1 |
+| `qwen3.6:35b` | not possible | -- |
+| `qwen3.6:27b` | not possible | -- |
