@@ -39,3 +39,17 @@ squash 56435dd git ci
 ```
 
 Save and exit the editor. After that you can write the new commit message and also save and exit.
+
+## Large File Storage (LFS)
+
+Install Git-LFS:
+
+```shell
+git lfs install
+```
+
+Track file:
+
+```shell
+git lfs track path/to/file
+```
